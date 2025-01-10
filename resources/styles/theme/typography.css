@@ -1,0 +1,16 @@
+:root {
+  --font-family-primary: "Red Hat Display", sans-serif;
+  --font-family-title: "Paytone One", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2.5rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}

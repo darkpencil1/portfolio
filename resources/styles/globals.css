@@ -1,0 +1,71 @@
+@import "./theme/colors.css";
+@import "./theme/spacing.css";
+@import "./theme/typography.css";
+@import "./theme/borders.css";
+@import "./theme/columns.css";
+@import "./theme/textShadow.css";
+
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Default font size */
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-primary);
+  background-image: url("/website-bg-large.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--font-family-title);
+  font-size: var(--fs-xxl);
+}
+
+h2 {
+  font-family: var(--font-family-title);
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-lg);
+}
+
+a {
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #606060;
+}

@@ -1,0 +1,25 @@
+.page {
+  margin: 0 10rem;
+  margin-bottom: 2rem;
+  max-width: 2000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story__container {
+  margin-top: 2rem;
+}
+
+.story__imgContainer {
+  align-self: center;
+}
+
+.story__img {
+  border-radius: var(--br-medium);
+}
+.story__imgDesc {
+  margin-top: 0;
+}

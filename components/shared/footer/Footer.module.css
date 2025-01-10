@@ -1,0 +1,83 @@
+.footer {
+  /*Position to bottom of page*/
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid var(--color-primary);
+}
+
+.footer__links {
+  margin-top: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+}
+
+.footer__linkContainer {
+  display: flex;
+  flex-direction: column;
+  > h3 {
+    color: var(--color-primary);
+    margin: 0;
+  }
+}
+
+.footer__pageLinks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  padding-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.footer__link > a {
+  color: var(--color-primary);
+  text-decoration: none;
+  position: relative;
+}
+
+/* Define the ::after pseudo-element */
+.footer__link > a::after {
+  content: ""; /* Add content to the pseudo-element */
+  position: absolute; /* Position it relative to the <a> element */
+  left: 0; /* Align it with the left edge of the <a> element */
+  bottom: 0; /* Place it at the bottom */
+  width: 0; /* Initially, the width is 0 */
+  height: 3px; /* Set the height to create the border effect */
+  background-color: var(--color-primary); /* Set the border color */
+  transition: width 0.3s ease; /* Add a smooth transition for width */
+}
+
+/* Define the styles for the <a> element on hover */
+.footer__link > a:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+.social-media-list li {
+  margin-left: var(--spacing-3);
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  width: var(--col-4);
+  flex: 1 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.copyright > span {
+  margin: auto;
+  margin-bottom: var(--spacing-1);
+  color: var(--color-primary); /* Set the border color */
+}

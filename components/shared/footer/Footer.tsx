@@ -1,0 +1,70 @@
+import Link from "next/link";
+import Col from "@/components/base/Col";
+import styles from "./Footer.module.css";
+
+type FooterLink = {
+  text: string;
+  link: string;
+};
+const links: Array<FooterLink> = [
+  { text: "FAQ", link: "/misc#faq" },
+  { text: "Returns", link: "/misc#qa-1" },
+  { text: "Contact", link: "/misc#contact" },
+];
+const pageLinks: Array<FooterLink> = [
+  { text: "Home", link: "/" },
+  { text: "Catalog", link: "/catalog" },
+  { text: "About", link: "/about" },
+  { text: "Shop", link: "/shop" },
+];
+
+const socialLinks: Array<FooterLink> = [{ text: "Instagram", link: "#" }];
+
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.footer__links}>
+        <div className={styles.footer__linkContainer}>
+          <h3>General</h3>
+          <ul>
+            {links.map((link: FooterLink, i: number) => {
+              return (
+                <li className={styles.footer__link} key={`footer-general-${i}`}>
+                  <Link href={link.link}>{link.text}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={styles.footer__linkContainer}>
+          <h3>Pages</h3>
+          <ul className={styles.footer__pageLinks}>
+            {pageLinks.map((link: FooterLink, i: number) => {
+              return (
+                <li className={styles.footer__link} key={`footer-page-${i}`}>
+                  <Link href={link.link}>{link.text}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={styles.footer__linkContainer}>
+          <h3>Social</h3>
+          <ul className={styles.footer__pageLinks}>
+            {socialLinks.map((link: FooterLink, i: number) => {
+              return (
+                <li className={styles.footer__link} key={`footer-social-${i}`}>
+                  <Link href={link.link}>{link.text}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <div className="copyright">
+        <span>&copy; 2025 darkpencil1</span>
+      </div>
+    </footer>
+  );
+};
+export default Footer;

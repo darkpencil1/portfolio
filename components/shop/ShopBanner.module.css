@@ -1,0 +1,40 @@
+.shopBanner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("/website-banner-lg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: start;
+  border-radius: var(--br-large);
+  border-right: 5px solid var(--color-primary-shadow);
+  border-bottom: 5px solid var(--color-primary-shadow);
+}
+
+.banner__textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-secondary) !important;
+  text-shadow: var(--text-shadow-base);
+  margin-left: var(--spacing-5);
+  margin-right: auto;
+  z-index: 2;
+}
+
+.banner__title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: var(--spacing-1) auto;
+}
+
+.banner__desc {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-top: 0;
+}

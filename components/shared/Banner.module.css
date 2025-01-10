@@ -1,0 +1,30 @@
+.banner {
+  height: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/website-banner-lg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 5px solid var(--color-primary-shadow);
+  border-bottom: 5px solid var(--color-primary-shadow);
+  border-radius: var(--br-large);
+  overflow: hidden;
+  color: var(--color-secondary) !important;
+  text-shadow: var(--text-shadow-base);
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin: var(--spacing-1) auto;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: var(--fw-semibold);
+}

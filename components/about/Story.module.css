@@ -1,0 +1,13 @@
+.story {
+  flex: 1;
+}
+.story h1 {
+  font-size: 3rem;
+  margin: var(--spacing-1) auto;
+}
+
+.story p {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: var(--fw-semibold);
+}

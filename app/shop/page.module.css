@@ -1,0 +1,18 @@
+.page {
+  margin: 0 3rem;
+  min-height: 70vh;
+}
+.product__wrapper {
+  margin: var(--spacing-6) 0;
+  gap: 100px;
+  justify-content: center;
+}
+
+.shop__noProducts {
+  margin: auto;
+  margin-top: 4rem;
+  width: 400px;
+}
+.shop__noProducts > p {
+  font-weight: var(--fw-bold);
+}

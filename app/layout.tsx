@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Red_Hat_Display, Paytone_One } from "next/font/google"; // Import the fonts
+import "@/resources/styles/globals.css"; // Import global styles
+import Header from "@/components/shared/header/Header";
+import { AppContextProvider } from "@/context/AppContextProvider";
+import Footer from "@/components/shared/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Define the fonts with custom CSS variable names
+const redHatDisplay = Red_Hat_Display({
+  variable: "--font-red-hat-display",
   subsets: ["latin"],
+  weight: ["300", "400", "600", "700"], // Include weights defined in typography.css
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const paytoneOne = Paytone_One({
+  variable: "--font-paytone-one",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -24,9 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <AppContextProvider>
+        <body className={`${paytoneOne.variable} ${redHatDisplay.variable} `}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </AppContextProvider>
     </html>
   );
 }

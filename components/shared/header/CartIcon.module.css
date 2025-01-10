@@ -1,0 +1,30 @@
+.cartIcon__container {
+  background-color: var(--color-primary);
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.cartIcon__container:hover {
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.cartIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.cartIcon__number {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  font-weight: var(--fw-bold);
+}
