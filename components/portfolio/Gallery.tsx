@@ -2,7 +2,6 @@
 import { useState } from "react";
 import artwork from "@/resources/portfolio/artwork";
 import Artwork, { ArtCategory } from "@/types/ArtworkInterface";
-import Button from "../base/Button";
 import styles from "./Gallery.module.css";
 import GalleryModal from "./GalleryModal";
 import { AnimatePresence, motion } from "framer-motion";
@@ -29,21 +28,6 @@ const Gallery: React.FC = () => {
 
   return (
     <div className={styles.gallery}>
-      {/* Filter Section */}
-      <div className={styles.filter}>
-        {topics.map((topic) => (
-          <Button
-            key={topic}
-            className={`${styles.filterButton} ${
-              filter === topic ? styles.active : ""
-            }`}
-            onClick={() => setFilter(topic)}
-          >
-            {topic}
-          </Button>
-        ))}
-      </div>
-
       {/* Image Grid */}
       <motion.div
         className={styles.imageGrid}
@@ -73,6 +57,15 @@ const Gallery: React.FC = () => {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* Filter Section */}
+      <div className={styles.filterContainer}>
+        {topics.map((topic) => (
+          <li className={styles.filterBtn} key={topic}>
+            <p onClick={() => setFilter(topic)}>{topic}</p>
+          </li>
+        ))}
+      </div>
 
       {/* Modal */}
       {isModalOpen && (

@@ -1,7 +1,7 @@
 "use client";
 import logo from "@/public/logo.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
-import CartIcon from "./CartIcon";
+//import CartIcon from "./CartIcon";
 import Img from "@/components/base/Img";
 import Link from "next/link";
 import styles from "./Header.module.css";
@@ -79,7 +79,6 @@ const Header: React.FC = () => {
             );
           })}
         </motion.nav>
-        <CartIcon />
       </AnimatePresence>
     </motion.header>
   );

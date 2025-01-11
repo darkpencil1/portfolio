@@ -22,9 +22,9 @@ export default function ModalNavArrow({
       onClick={onClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      whileHover={{ scale: 1.2 }} // Scale effect on hover
-      whileTap={{ scale: 0.95 }} // Scale effect on click
-      transition={{ duration: 0.2 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.1 }}
     >
       <Image
         src={arrow}

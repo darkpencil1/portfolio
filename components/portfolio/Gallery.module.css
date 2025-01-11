@@ -1,28 +1,49 @@
-.galleryContainer {
+.gallery {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 20px;
-  text-align: center;
+  height: auto; /* Allow it to grow */
+  min-height: 100vh; /* Optional: Ensure it fills at least the viewport height */
+  overflow: visible; /* Ensure content isn't clipped */
 }
 
 .filterContainer {
+  position: sticky;
+  bottom: 30;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
-  justify-content: start;
-  margin-bottom: 20px;
-  gap: 10px;
+  flex-direction: row;
+  align-self: center;
+  align-items: center; /* Aligns buttons to the left */
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: var(--br-full);
+  border: 2px solid var(--color-primary);
+  height: 50px;
+  width: 300px;
+  gap: 20px;
 }
 
-.active {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+.filterBtn {
+  position: relative;
+  list-style-type: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
 }
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  flex: 1;
 }
 
 .imageCard {
+  height: 300px;
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
@@ -57,4 +78,21 @@
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
+}
+
+/* Define the ::after pseudo-element */
+.filterBtn > p::after {
+  content: ""; /* Add content to the pseudo-element */
+  position: absolute; /* Position it relative to the <a> element */
+  left: 0; /* Align it with the left edge of the <a> element */
+  bottom: 10; /* Place it at the bottom */
+  width: 0; /* Initially, the width is 0 */
+  height: 3px; /* Set the height to create the border effect */
+  background-color: var(--color-primary);
+  transition: width 0.3s ease; /* Add a smooth transition for width */
+}
+
+/* Define the styles for the <a> element on hover */
+.filterBtn > p:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
 }

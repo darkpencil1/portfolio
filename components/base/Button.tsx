@@ -18,16 +18,17 @@ const Button: React.FC<ButtonProps> = ({
   btnType = "primary",
   children,
   onClick,
+  className,
 }) => {
-  const className = `${styles.button} ${styles[`button--${btnType}`]} ${
-    styles[`button--${size}`]
-  }`;
+  const btnClassName = `${className} ${styles.button} ${
+    styles[`button--${btnType}`]
+  } ${styles[`button--${size}`]}`;
 
   return (
     <motion.button
       whileHover={btnType !== "disabled" ? { scale: 1.05 } : {}}
       transition={{ type: "spring", stiffness: 1000, damping: 10 }}
-      className={className}
+      className={btnClassName}
       onClick={onClick}
     >
       {children}

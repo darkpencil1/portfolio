@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Col from "@/components/base/Col";
 import styles from "./Footer.module.css";
 
 type FooterLink = {
@@ -24,17 +23,11 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__links}>
-        <div className={styles.footer__linkContainer}>
-          <h3>General</h3>
-          <ul>
-            {links.map((link: FooterLink, i: number) => {
-              return (
-                <li className={styles.footer__link} key={`footer-general-${i}`}>
-                  <Link href={link.link}>{link.text}</Link>
-                </li>
-              );
-            })}
-          </ul>
+        <div className={styles.footer__commision}>
+          <h2>Accepting commisions!</h2>
+          <p>
+            Send me a message via <Link href={"/contact"}>contact form.</Link>
+          </p>
         </div>
         <div className={styles.footer__linkContainer}>
           <h3>Pages</h3>

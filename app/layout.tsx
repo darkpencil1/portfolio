@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Red_Hat_Display, Paytone_One } from "next/font/google"; // Import the fonts
 import "@/resources/styles/globals.css"; // Import global styles
 import Header from "@/components/shared/header/Header";
-import { AppContextProvider } from "@/context/AppContextProvider";
 import Footer from "@/components/shared/footer/Footer";
 
 // Define the fonts with custom CSS variable names
@@ -30,13 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <AppContextProvider>
-        <body className={`${paytoneOne.variable} ${redHatDisplay.variable} `}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </AppContextProvider>
+      <body className={`${paytoneOne.variable} ${redHatDisplay.variable} `}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
