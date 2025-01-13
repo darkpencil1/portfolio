@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--color-bg);
-  padding: var(--spacing-4);
+  border-bottom: 2px solid var(--color-gray);
+  border-right: 2px solid var(--color-gray);
+  box-shadow: 0 0 10px var(--color-gray);
+  border-radius: var(--br-large);
   min-width: 200px;
   gap: 0 20px;
 }

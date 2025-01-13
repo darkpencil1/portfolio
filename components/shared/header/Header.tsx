@@ -1,7 +1,6 @@
 "use client";
 import logo from "@/public/logo.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
-//import CartIcon from "./CartIcon";
 import Img from "@/components/base/Img";
 import Link from "next/link";
 import styles from "./Header.module.css";
@@ -30,6 +29,10 @@ const navItems: Array<NavItem> = [
   {
     href: "about",
     name: "About",
+  },
+  {
+    href: "contact",
+    name: "Contact",
   },
   {
     href: "shop",

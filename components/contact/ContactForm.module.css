@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+}
+.name > p {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.form > p {
+  display: flex;
+  flex-direction: column;
+}
+
+.formElement {
+  width: 200px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--br-small);
+  padding: 5px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.formElement:focus-visible {
+  outline: var(--color-primary) auto 1px;
+}
+
+.textArea {
+  width: 400px;
+
+.label {
+  font-weight: var(--fw-semibold);
+}

@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
 export type ButtonType = "primary" | "secondary" | "white" | "disabled" | "wip";
 
-type ButtonProps = {
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
   btnType?: ButtonType;
   size?: ButtonSize;

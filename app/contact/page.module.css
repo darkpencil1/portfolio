@@ -1,0 +1,20 @@
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
+  gap: 20px;
+}
+
+.greeting {
+  max-width: 25vw;
+  flex: 1;
+}
+
+.greeting > h1 {
+  margin-bottom: 0;
+}
+
+.greeting > p {
+  margin-top: 0;
+}
