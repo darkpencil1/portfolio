@@ -1,0 +1,30 @@
+.captcha {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.input {
+  width: 200px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--br-small);
+  padding: 5px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.input:focus-visible {
+  outline: var(--color-primary) auto 1px;
+}
+
+.generated {
+  font-weight: var(--fw-bold);
+}

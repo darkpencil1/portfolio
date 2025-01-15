@@ -20,3 +20,15 @@
 .leftArrow {
   transform: rotate(180deg); /* Rotate left arrow image */
 }
+
+@media (max-width: 900px) {
+  .arrowContainer {
+    top: 30px;
+  }
+  .arrowContainer__left {
+    left: calc(50% - 100px);
+  }
+  .arrowContainer__right {
+    right: calc(50% - 100px);
+  }
+}

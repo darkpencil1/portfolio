@@ -9,7 +9,10 @@ import Row from "@/components/base/Row";
 const About: React.FC = () => {
   return (
     <div className={styles.page}>
-      <Banner title="Mission" short="Make art that inspires wonder" />
+      <Banner
+        title="Mission"
+        short="I'll put a mission statement here once I figure it out."
+      />
       <Row className={styles.story__container} gap="20px">
         <Story />
         <div className={styles.story__imgContainer}>

@@ -10,7 +10,8 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   btnType?: ButtonType;
   size?: ButtonSize;
   children: ReactNode;
-  onClick?: () => void;
+  onClick?: Function;
+  disabled?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   className,
+  disabled,
 }) => {
   const btnClassName = `${className} ${styles.button} ${
     styles[`button--${btnType}`]
@@ -26,10 +28,11 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <motion.button
-      whileHover={btnType !== "disabled" ? { scale: 1.05 } : {}}
+      whileHover={btnType !== "disabled" ? { scale: 1.01 } : {}}
       transition={{ type: "spring", stiffness: 1000, damping: 10 }}
       className={btnClassName}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </motion.button>

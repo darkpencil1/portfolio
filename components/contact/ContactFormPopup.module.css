@@ -1,0 +1,13 @@
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  text-shadow: var(--text-shadow-base);
+  border-radius: var(--br-medium);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}

@@ -17,4 +17,5 @@
 
 .greeting > p {
   margin-top: 0;
+  font-weight: var(--fw-semibold);
 }
