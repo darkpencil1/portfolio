@@ -28,3 +28,9 @@
   margin-top: 0;
   font-weight: var(--fw-semibold);
 }
+
+@media (max-width: 1200) {
+  .banner {
+    padding: 2rem;
+  }
+}

@@ -24,3 +24,9 @@
 .story__imgDesc {
   margin-top: 0;
 }
+
+@media (max-width: 1100) {
+  .story__container {
+    flex-direction: column !important;
+  }
+}

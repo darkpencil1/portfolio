@@ -7,12 +7,14 @@ type FooterLink = {
 };
 const pageLinks: Array<FooterLink> = [
   { text: "Home", link: "/" },
-  { text: "Catalog", link: "/catalog" },
   { text: "About", link: "/about" },
+  { text: "Contact", link: "/contact" },
   { text: "Shop", link: "/shop" },
 ];
 
-const socialLinks: Array<FooterLink> = [{ text: "Instagram", link: "#" }];
+const socialLinks: Array<FooterLink> = [
+  { text: "Instagram", link: "https://www.instagram.com/darkpencil1/" },
+];
 
 const Footer = () => {
   return (
