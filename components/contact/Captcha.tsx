@@ -49,6 +49,7 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
       <input
         className={styles.input}
         type="text"
+        id="captchaInput"
         value={captchaInput}
         placeholder="Write here the generated text"
         onChange={(e) => setCaptchaInput(e.target.value)}

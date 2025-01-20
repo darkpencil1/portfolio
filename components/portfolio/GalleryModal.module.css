@@ -11,25 +11,30 @@
   z-index: 2000;
 }
 
-.modalImage {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 10px;
-}
-
 .modalContent {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.modalButton__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.modalArrow__container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .closeButton {
-  position: absolute;
-  top: 30px;
-  right: 30px;
   width: 70px;
   height: 70px;
   cursor: pointer;

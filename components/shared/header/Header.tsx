@@ -8,7 +8,7 @@ import close from "@/public/icons/x-button.png";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navVariant: Variants = {
   animate: {
@@ -43,10 +43,32 @@ const navItems: Array<NavItem> = [
     name: "Shop",
   },
 ];
+
+const useMobile = (): boolean => {
+  const [isMobileScreen, setIsMobileScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobileScreen(window.innerWidth <= 1000);
+    };
+
+    // Set initial state
+    checkScreenSize();
+
+    // Add event listener on mount
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  return isMobileScreen;
+};
+
 const Header: React.FC = () => {
-  const controls = useAnimation();
   const router = useRouter();
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMobile();
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
@@ -71,7 +93,7 @@ const Header: React.FC = () => {
           />
         </motion.div>
 
-        {window.innerWidth <= 1000 && (
+        {isMobile && (
           <motion.div
             className={styles.nav__toggle}
             whileHover={{ scale: 1.1 }}
@@ -79,7 +101,7 @@ const Header: React.FC = () => {
             transition={{ duration: 0.1 }}
           >
             <Image
-              src={menuOpen ? hamburger : close}
+              src={menuOpen ? close : hamburger}
               onClick={toggleMenu}
               alt="toggle"
               className={styles.nav__toggleImg}
@@ -95,7 +117,7 @@ const Header: React.FC = () => {
           key="header-nav"
           className={styles.nav}
         >
-          {window.innerWidth > 1000 ? (
+          {!isMobile ? (
             navItems.map((item: NavItem, i: number) => {
               return (
                 <motion.div
@@ -103,6 +125,7 @@ const Header: React.FC = () => {
                   exit="exit"
                   variants={navVariant}
                   transition={{ delay: i * 0.1, duration: 0.2 }}
+                  className={styles.desktopLink}
                   key={i}
                 >
                   <Link href={item.href}>{item.name}</Link>
@@ -115,7 +138,6 @@ const Header: React.FC = () => {
                 {menuOpen &&
                   [...navItems] // Reverse order for exit animation
                     .slice()
-                    .reverse()
                     .map((item: NavItem, i: number) => (
                       <motion.div
                         initial={{ scale: 0, opacity: 0 }}

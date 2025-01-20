@@ -47,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 7px;

@@ -33,24 +33,23 @@ const GalleryModal: React.FC<ModalProps> = ({
 
   return (
     <div className={styles.modalBackdrop}>
-      <motion.div
-        className={styles.modalContent}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8 }}
-      >
-        <ModalCloseButton onClose={onClose} />
+      <div className={styles.modalContent}>
         {/* Image */}
         <ModalImage currentImage={currentImage} index={currentIndex} />
 
-        {/* Navigation Arrows */}
-        {images.length > 1 && (
-          <>
-            <ModalNavArrow direction={"left"} onClick={handlePrevious} />
-            <ModalNavArrow direction={"right"} onClick={handleNext} />
-          </>
-        )}
-      </motion.div>
+        <div className={styles.modalButton__container}>
+          {/* Navigation Arrows */}
+          <div className={styles.modalArrow__container}>
+            {images.length > 1 && (
+              <>
+                <ModalNavArrow direction={"left"} onClick={handlePrevious} />
+                <ModalNavArrow direction={"right"} onClick={handleNext} />
+              </>
+            )}
+          </div>
+          <ModalCloseButton onClose={onClose} />
+        </div>
+      </div>
     </div>
   );
 };

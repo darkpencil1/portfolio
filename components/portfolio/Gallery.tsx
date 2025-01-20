@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import artwork from "@/resources/portfolio/artwork";
 import Artwork, { ArtCategory } from "@/types/ArtworkInterface";
 import styles from "./Gallery.module.css";
@@ -13,6 +13,20 @@ const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<string>("all");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  //Prevent site scrolling when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isModalOpen]);
 
   const filteredImages =
     filter === "all"

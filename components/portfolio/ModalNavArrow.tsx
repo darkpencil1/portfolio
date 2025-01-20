@@ -14,11 +14,7 @@ export default function ModalNavArrow({
 }: NavigationArrowProps) {
   return (
     <motion.div
-      className={
-        direction === "left"
-          ? `${styles.arrowContainer__left} ${styles.arrowContainer}`
-          : `${styles.arrowContainer__right} ${styles.arrowContainer}`
-      }
+      className={styles.arrowContainer}
       onClick={onClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -29,7 +25,11 @@ export default function ModalNavArrow({
       <Image
         src={arrow}
         alt={`${direction} arrow`}
-        className={direction === "left" ? styles.leftArrow : styles.rightArrow}
+        className={
+          direction === "left"
+            ? `${styles.leftArrow} ${styles.arrow}`
+            : `${styles.rightArrow} ${styles.arrow}`
+        }
       />
     </motion.div>
   );

@@ -41,6 +41,11 @@
   cursor: pointer;
 }
 
+.desktopLink {
+  display: flex;
+  align-items: center;
+}
+
 .nav a::after {
   content: "";
   position: absolute;
