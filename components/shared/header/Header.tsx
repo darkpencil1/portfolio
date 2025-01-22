@@ -82,6 +82,7 @@ const Header: React.FC = () => {
         <motion.div
           className={styles.nav__logo}
           onClick={() => router.push("/")}
+          data-cy="nav__logo"
         >
           <Img
             whileHover={{ scale: 1.1 }}
@@ -105,6 +106,7 @@ const Header: React.FC = () => {
               onClick={toggleMenu}
               alt="toggle"
               className={styles.nav__toggleImg}
+              data-cy="nav__toggleImg"
             />
           </motion.div>
         )}
@@ -127,6 +129,7 @@ const Header: React.FC = () => {
                   transition={{ delay: i * 0.1, duration: 0.2 }}
                   className={styles.desktopLink}
                   key={i}
+                  data-cy="desktopLink"
                 >
                   <Link href={item.href}>{item.name}</Link>
                 </motion.div>
@@ -167,6 +170,7 @@ const Header: React.FC = () => {
                         }}
                         key={item.name}
                         className={styles.mobileLink}
+                        data-cy="mobileLink"
                       >
                         <Link
                           href={item.href}

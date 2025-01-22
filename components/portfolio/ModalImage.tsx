@@ -17,6 +17,7 @@ export default function ModalImage({ currentImage, index }: ModalImageProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
       key={`Image ${index + 1}`}
+      data-cy="modal-image"
     >
       <Image
         className={styles.modalImage}

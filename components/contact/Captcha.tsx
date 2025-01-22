@@ -44,7 +44,9 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
         >
           Generate CAPTCHA
         </Button>
-        <div className={styles.generated}>{captcha}</div>
+        <div className={styles.generated} data-cy="generated-captcha">
+          {captcha}
+        </div>
       </div>
       <input
         className={styles.input}

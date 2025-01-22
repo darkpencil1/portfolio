@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "img": "../../public/images/visionbakers-bay.jpg",
+    "category": "digital"
+  },
+  {
+    "id": "2",
+    "img": "../../public/images/oracle.jpg",
+    "category": "drawing"
+  }
+]

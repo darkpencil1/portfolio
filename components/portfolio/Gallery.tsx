@@ -41,7 +41,7 @@ const Gallery: React.FC = () => {
   const handleCloseModal = () => setIsModalOpen(false);
 
   return (
-    <div className={styles.gallery}>
+    <div className={styles.gallery} data-cy="gallery">
       {/* Image Grid */}
       <motion.div
         className={styles.imageGrid}
@@ -49,6 +49,7 @@ const Gallery: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        data-cy="gallery-grid"
       >
         <AnimatePresence>
           {filteredImages.map((artwork: Artwork, index: number) => (

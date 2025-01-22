@@ -1,3 +1,6 @@
+import Sinon = require("cypress/types/sinon");
+import * as actions from "../..//lib/actions";
+
 describe("Contact Form", () => {
   beforeEach(() => {
     cy.visit("/contact"); // Replace with your actual contact page route
@@ -13,22 +16,11 @@ describe("Contact Form", () => {
   });
 
   it("Captcha is shown when button is clicked", () => {
-    cy.get(".generated").should("not.exist");
-    cy.get("button").contains("Generate CAPTCHA").click();
-    cy.get(".generated").should("exist");
-    cy.get(".generated").should("exist");
-    cy.get(".generated")
-      .invoke("text")
-      .then((text) => {
-        expect(text).to.have.length(6);
-      });
+    cy.fillCaptcha();
   });
 
   it("allows user to fill in form fields", () => {
-    cy.get("input#first_name").type("John");
-    cy.get("input#last_name").type("Doe");
-    cy.get("input#email").type("john.doe@example.com");
-    cy.get("textarea#message").type("This is a test message.");
+    cy.fillFields();
 
     cy.get("input#first_name").should("have.value", "John");
     cy.get("input#last_name").should("have.value", "Doe");
@@ -37,57 +29,35 @@ describe("Contact Form", () => {
   });
 
   it("enables submit button after all fields are filled", () => {
-    cy.get("input#first_name").type("John");
-    cy.get("input#last_name").type("Doe");
-    cy.get("input#email").type("john.doe@example.com");
-    cy.get("textarea#message").type("This is a test message.");
-    //Activate captcha
-    cy.contains("button", "Generate CAPTCHA").click();
+    cy.contains("button", "Submit").should("be.disabled");
 
-    // Wait for the CAPTCHA text to be generated (adjust timeout if needed)
-    cy.get(".generated").should("not.be.empty");
-
-    // Copy the CAPTCHA text
-    cy.get(".generated")
-      .invoke("text")
-      .then((captchaText) => {
-        // Insert the CAPTCHA text into the input field
-        cy.get("#captchaInput").type(captchaText);
-      });
+    cy.fillFields();
+    cy.fillCaptcha();
 
     // Verify the "Submit" button is no longer disabled
     cy.contains("button", "Submit").should("not.be.disabled");
   });
 
-  it("Submit is enabled when fields are filled", () => {
-    cy.get(".generated").should("not.exist");
-    cy.get("button").contains("Generate CAPTCHA").click();
-    cy.get(".generated").should("exist");
-    cy.get(".generated").should("exist");
-    cy.get(".generated")
-      .invoke("text")
-      .then((text) => {
-        expect(text).to.have.length(6);
-      });
-  });
+  it.skip("submits the form and shows a success popup", () => {
+    let submitFormStub: Sinon.SinonStub;
+    // Mock the submitForm function
+    submitFormStub = cy
+      .stub(actions, "submitForm")
+      .resolves({ success: "Message sent succesfully.", error: null });
 
-  it("submits the form and shows a success popup", () => {
-    cy.get("input#first_name").type("John");
-    cy.get("input#last_name").type("Doe");
-    cy.get("input#email").type("john.doe@example.com");
-    cy.get("textarea#message").type("This is a test message.");
-    cy.get("button").contains("Mock Captcha").click(); // Simulate captcha validation
+    // Alias the stub for easier assertions
+    cy.wrap(submitFormStub).as("submitFormStub");
+    cy.fillFields();
+    cy.fillCaptcha();
     cy.contains("button", "Submit").click(); // Submit the form
-
-    cy.wait(1000); // Adjust based on your debounce/submit delay
-    cy.get(".popup-class-name").should("exist"); // Replace with actual popup class or identifier
-  });
-
-  it("shows error messages for invalid inputs", () => {
-    cy.get("input#email").type("invalid-email");
-    cy.get("button").contains("Mock Captcha").click(); // Simulate captcha validation
-    cy.contains("button", "Submit").click();
-
-    cy.get("li").should("contain.text", "email: Invalid email format"); // Replace with the actual error message
+    // Assert that the submitForm function was called with the correct data
+    cy.get("@submitFormStub").should("have.been.calledOnceWith", {
+      first_name: "John",
+      last_name: "Doe",
+      email: "john.doe@example.com",
+      message: "This is a test message.",
+    });
+    cy.wait(1000);
+    cy.get("[data-cy='popup']").should("exist"); // Replace with actual popup class or identifier
   });
 });

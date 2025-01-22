@@ -11,6 +11,7 @@ const ContactFormPopup = () => {
       exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
       className={styles.popup}
+      data-cy="popup"
     >
       <h3>Message succesfully sent!</h3>
       <p>I'll get back to you soon.</p>

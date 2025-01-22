@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import styles from "./GalleryModal.module.css";
 import { StaticImageData } from "next/image";
 import ModalImage from "./ModalImage";
@@ -32,7 +31,7 @@ const GalleryModal: React.FC<ModalProps> = ({
   };
 
   return (
-    <div className={styles.modalBackdrop}>
+    <div className={styles.modalBackdrop} data-cy="modal">
       <div className={styles.modalContent}>
         {/* Image */}
         <ModalImage currentImage={currentImage} index={currentIndex} />
@@ -42,8 +41,16 @@ const GalleryModal: React.FC<ModalProps> = ({
           <div className={styles.modalArrow__container}>
             {images.length > 1 && (
               <>
-                <ModalNavArrow direction={"left"} onClick={handlePrevious} />
-                <ModalNavArrow direction={"right"} onClick={handleNext} />
+                <ModalNavArrow
+                  direction={"left"}
+                  onClick={handlePrevious}
+                  data-cy="modal-prev"
+                />
+                <ModalNavArrow
+                  direction={"right"}
+                  onClick={handleNext}
+                  data-cy="modal-next"
+                />
               </>
             )}
           </div>

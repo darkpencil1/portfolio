@@ -129,6 +129,9 @@ const ContactForm = () => {
           {isPending ? <>Sending...</> : <>Submit</>}
         </Button>
 
+        {state.error && !state.success && (
+          <p>An error occured, please try again soon.</p>
+        )}
         {state.errorDetails && (
           <>
             <h3 style={{ marginBottom: 0 }}>Check the inputs:</h3>
