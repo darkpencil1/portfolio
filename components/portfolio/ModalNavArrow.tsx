@@ -21,6 +21,7 @@ export default function ModalNavArrow({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.1 }}
+      data-cy={direction === "left" ? "modal-prev" : "modal-next"}
     >
       <Image
         src={arrow}

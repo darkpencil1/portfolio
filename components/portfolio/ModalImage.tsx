@@ -26,6 +26,7 @@ export default function ModalImage({ currentImage, index }: ModalImageProps) {
         height={currentImage.height}
         alt={`Image ${index + 1}`}
         layout="responsive"
+        data-cy={`modal-image-${index + 1}`}
       />
     </motion.div>
   );

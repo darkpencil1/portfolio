@@ -41,16 +41,8 @@ const GalleryModal: React.FC<ModalProps> = ({
           <div className={styles.modalArrow__container}>
             {images.length > 1 && (
               <>
-                <ModalNavArrow
-                  direction={"left"}
-                  onClick={handlePrevious}
-                  data-cy="modal-prev"
-                />
-                <ModalNavArrow
-                  direction={"right"}
-                  onClick={handleNext}
-                  data-cy="modal-next"
-                />
+                <ModalNavArrow direction={"left"} onClick={handlePrevious} />
+                <ModalNavArrow direction={"right"} onClick={handleNext} />
               </>
             )}
           </div>

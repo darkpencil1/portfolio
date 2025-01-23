@@ -1,4 +1,4 @@
-import artwork from "@/resources/portfolio/artwork";
+import artwork from "../fixtures/artwork";
 
 describe("Gallery Component", () => {
   beforeEach(() => {
@@ -6,7 +6,9 @@ describe("Gallery Component", () => {
   });
 
   it("renders the image grid with all images by default", () => {
-    cy.getDataCy("gallery").children().should("have.length", artwork.length);
+    cy.getDataCy("gallery-grid")
+      .children()
+      .should("have.length", artwork.length);
   });
 
   it("filters images based on selected category", () => {
@@ -32,7 +34,7 @@ describe("Gallery Component", () => {
   it("opens the modal when an image is clicked", () => {
     cy.getDataCy("gallery-grid").children().first().click();
     cy.getDataCy("modal").should("be.visible");
-    cy.getDataCy("modal-img").should("be.visible");
+    cy.getDataCy("modal-image").should("be.visible");
   });
 
   it("closes the modal when close button is clicked", () => {
@@ -50,15 +52,17 @@ describe("Gallery Component", () => {
   });
 
   it("navigates between images in the modal", () => {
-    const images = artwork.map((img) => img.img);
-
     cy.getDataCy("gallery-grid").children().first().click();
-    cy.getDataCy("modal-img").should("have.attr", "src", images[0]);
-
+    cy.getDataCy("modal-image")
+      .find("img")
+      .should("have.attr", "data-cy", `modal-image-1`);
     cy.getDataCy("modal-next").click();
-    cy.getDataCy("modal-img").should("have.attr", "src", images[1]);
-
+    cy.getDataCy("modal-image")
+      .find("img")
+      .should("have.attr", "data-cy", `modal-image-2`);
     cy.getDataCy("modal-prev").click();
-    cy.getDataCy("modal-img").should("have.attr", "src", images[0]);
+    cy.getDataCy("modal-image")
+      .find("img")
+      .should("have.attr", "data-cy", `modal-image-1`);
   });
 });

@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "lib": ["es5", "dom"],
     "types": ["cypress", "./support"],
     "paths": {

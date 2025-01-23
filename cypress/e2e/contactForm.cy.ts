@@ -1,6 +1,3 @@
-import Sinon = require("cypress/types/sinon");
-import * as actions from "../..//lib/actions";
-
 describe("Contact Form", () => {
   beforeEach(() => {
     cy.visit("/contact"); // Replace with your actual contact page route
@@ -38,26 +35,19 @@ describe("Contact Form", () => {
     cy.contains("button", "Submit").should("not.be.disabled");
   });
 
-  it.skip("submits the form and shows a success popup", () => {
-    let submitFormStub: Sinon.SinonStub;
-    // Mock the submitForm function
-    submitFormStub = cy
-      .stub(actions, "submitForm")
-      .resolves({ success: "Message sent succesfully.", error: null });
-
-    // Alias the stub for easier assertions
-    cy.wrap(submitFormStub).as("submitFormStub");
+  it("submits the form and shows a success popup", () => {
+    cy.intercept("POST", "/contact", {
+      headers: {
+        "content-type": "text/x-component",
+      },
+      statusCode: 200,
+      //Server actions have a very unique body structure
+      body: `0:{"a":"$@1","f":"", "b":"development"}\n1:{ "success": "Message sent succesfully.", "error": null }\n`,
+    }).as("submitForm");
     cy.fillFields();
     cy.fillCaptcha();
     cy.contains("button", "Submit").click(); // Submit the form
-    // Assert that the submitForm function was called with the correct data
-    cy.get("@submitFormStub").should("have.been.calledOnceWith", {
-      first_name: "John",
-      last_name: "Doe",
-      email: "john.doe@example.com",
-      message: "This is a test message.",
-    });
-    cy.wait(1000);
-    cy.get("[data-cy='popup']").should("exist"); // Replace with actual popup class or identifier
+    cy.wait("@submitForm");
+    cy.getDataCy("popup").should("exist");
   });
 });
