@@ -3,19 +3,14 @@ import styles from "./Story.module.css";
 const Story = () => {
   return (
     <div className={styles.story}>
-      <h1>Story time</h1>
+      <h1>Hello there</h1>
       <p>
-        I have been fascinated by characters for the longest time. Besides being
-        very fun to draw, through them we can experience life from new and
-        refreshing viewpoints. Simple questions like "How would it feel like to
-        be this person?" or "How they react to a situation X?" can open windows
-        to new thoughts never thought before.
+        My name is Ville Lähetkangas. I'm a character artist based in Helsinki,
+        Finland. I originally did mainly digital art, but lately I've taken a
+        turn into traditional painting. Very excited to see how it turns out.
+        Alongside painting I enjoy very much just drawing with charcoal and
+        graphite. Glad to see you visiting the site :)
         <br />
-        <br />
-        So what motivates me is a sense of wonder. It's very precious to come
-        across new ideas or emotions. It's like a wave washing over you, waking
-        you up to a more present and exciting experience. I've boiled some of
-        these ideas into principles that are listed below.
       </p>
     </div>
   );

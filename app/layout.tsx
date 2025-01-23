@@ -31,6 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${paytoneOne.variable} ${redHatDisplay.variable} `}>
         <Header />
+        {/*Spacer to prevent header from causing a slight initial scroll*/}
+        <div style={{ height: "20px" }}></div>
         <main>{children}</main>
         <Footer />
       </body>

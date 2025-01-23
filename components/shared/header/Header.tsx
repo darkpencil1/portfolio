@@ -1,6 +1,6 @@
 "use client";
-import logo from "@/public/logo.png";
-import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
+import logo from "@/public/icons/logo.png";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import Img from "@/components/base/Img";
 import Image from "next/image";
 import hamburger from "@/public/icons/hamburger.png";
@@ -79,20 +79,23 @@ const Header: React.FC = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }} // Smooth height transition
     >
       <div className={styles.header__iconContainer}>
-        <motion.div
-          className={styles.nav__logo}
-          onClick={() => router.push("/")}
-          data-cy="nav__logo"
-        >
-          <Img
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.1 }}
-            src={logo.src}
-            alt="Fancy logo"
-            width="60px"
-          />
-        </motion.div>
+        <div className={styles.header__title}>
+          <motion.div
+            className={styles.nav__logo}
+            onClick={() => router.push("/")}
+            data-cy="nav__logo"
+          >
+            <Img
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1 }}
+              src={logo.src}
+              alt="Fancy logo"
+              width="50px"
+            />
+          </motion.div>
+          <h3 className={styles.title}>Art of Ville Lähetkangas</h3>
+        </div>
 
         {isMobile && (
           <motion.div

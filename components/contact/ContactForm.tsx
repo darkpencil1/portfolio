@@ -128,13 +128,7 @@ const ContactForm = () => {
         >
           {isPending ? <>Sending...</> : <>Submit</>}
         </Button>
-        {state.success && (
-          <p data-cy="success-message" id="success-message">
-            Success sending the message
-          </p>
-        )}
-
-        {state.error && !state.success && (
+        {state.error && !state.success && !state.errorDetails && (
           <p>An error occured, please try again soon.</p>
         )}
         {state.errorDetails && (
