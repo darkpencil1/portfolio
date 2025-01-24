@@ -21,8 +21,7 @@ Cypress.Commands.add("fillCaptcha", () => {
 });
 
 Cypress.Commands.add("fillFields", () => {
-  cy.get("input#first_name").type("John");
-  cy.get("input#last_name").type("Doe");
+  cy.get("input#name").type("John Doe");
   cy.get("input#email").type("john.doe@example.com");
   cy.get("textarea#message").type("This is a test message.");
 });

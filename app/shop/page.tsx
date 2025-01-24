@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import styles from "./page.module.css";
 
 const Shop: React.FC = () => {
-  let products: IProduct[] = [];
+  const products: IProduct[] = [];
   return (
     <div className={styles.page}>
       <ShopBanner />
@@ -37,8 +37,8 @@ const Shop: React.FC = () => {
             <div className={styles.shop__noProducts}>
               <h2>No available products...yet</h2>
               <p>
-                I'll have prints and original painting and drawings available
-                through this shop. Stay tuned.
+                {`I'll have prints and original paintings available
+                through this shop. Stay tuned.`}
               </p>
             </div>
           )}

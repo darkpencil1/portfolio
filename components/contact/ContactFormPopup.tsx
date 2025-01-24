@@ -14,7 +14,7 @@ const ContactFormPopup = () => {
       data-cy="popup"
     >
       <h3>Message succesfully sent!</h3>
-      <p>I'll get back to you soon.</p>
+      <p>{`I'll get back to you soon.`}</p>
     </motion.div>
   );
 };

@@ -10,7 +10,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   btnType?: ButtonType;
   size?: ButtonSize;
   children: ReactNode;
-  onClick?: Function;
+  onClick?: ((e: React.MouseEvent<HTMLButtonElement>) => void) | (() => void);
   disabled?: boolean;
 };
 

@@ -4,14 +4,13 @@ import { z } from "zod";
 import nodemailer from "nodemailer";
 
 const contactSchema = z.object({
-  first_name: z.string().min(1).max(50).trim(),
-  last_name: z.string().min(1).max(50).trim(),
+  name: z.string().min(1).max(50).trim(),
   email: z.string().email().trim(),
   message: z.string().min(10).max(500).trim(),
 });
 
 const sendEmail = async (formData: ContactData): Promise<boolean> => {
-  const { first_name, last_name, email, message } = formData;
+  const { name, email, message } = formData;
   // Set up the transporter
   const transporter = nodemailer.createTransport({
     host: process.env.OUTLOOK_SMTP,
@@ -25,7 +24,7 @@ const sendEmail = async (formData: ContactData): Promise<boolean> => {
 
   try {
     await transporter.sendMail({
-      from: `"${first_name} ${last_name}" <${email}>`,
+      from: `"${name}" <${email}>`,
       to: process.env.SITE_OWNER_EMAIL, // Site owner's email
       subject: "New Contact Form Submission",
       text: message,
@@ -42,8 +41,7 @@ const submitForm = async (
 ): Promise<ContactFormState> => {
   try {
     const data = {
-      first_name: formData.get("first_name") as string,
-      last_name: formData.get("last_name") as string,
+      name: formData.get("name") as string,
       email: formData.get("email") as string,
       message: formData.get("message") as string,
     };

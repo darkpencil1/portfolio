@@ -32,10 +32,11 @@
 .footer__linkContainer {
   display: flex;
   flex-direction: column;
-  > h3 {
-    color: var(--color-primary);
-    margin: 0;
-  }
+}
+
+.footer__linkContainer > h3 {
+  color: var(--color-primary);
+  margin: 0;
 }
 
 .footer__pageLinks {

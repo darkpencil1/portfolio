@@ -6,8 +6,8 @@ export const ShopBanner = () => {
       <div className={styles.banner__textContainer}>
         <h1 className={styles.banner__title}>Shop</h1>
         <p className={styles.banner__desc}>
-          Fancy a poster to cover your wall? You're in the right place...once
-          this shop is operational.
+          {`Fancy an original painting to cover your wall? You're in the right place...once
+          this shop is operational.`}
         </p>
       </div>
     </div>

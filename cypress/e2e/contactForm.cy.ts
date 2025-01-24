@@ -5,8 +5,7 @@ describe("Contact Form", () => {
 
   it("renders all form fields and submit button", () => {
     cy.get("form").should("exist");
-    cy.get("input#first_name").should("exist");
-    cy.get("input#last_name").should("exist");
+    cy.get("input#name").should("exist");
     cy.get("input#email").should("exist");
     cy.get("textarea#message").should("exist");
     cy.contains("button", "Submit").should("exist").and("be.disabled"); // Initially disabled due to captcha
@@ -19,8 +18,7 @@ describe("Contact Form", () => {
   it("allows user to fill in form fields", () => {
     cy.fillFields();
 
-    cy.get("input#first_name").should("have.value", "John");
-    cy.get("input#last_name").should("have.value", "Doe");
+    cy.get("input#name").should("have.value", "John Doe");
     cy.get("input#email").should("have.value", "john.doe@example.com");
     cy.get("textarea#message").should("have.value", "This is a test message.");
   });

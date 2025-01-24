@@ -23,7 +23,7 @@ const CartIcon = () => {
         });
       }
     }
-  }, [cart]);
+  }, [cart, controls]);
 
   return (
     <motion.div

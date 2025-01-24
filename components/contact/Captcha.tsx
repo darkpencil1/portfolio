@@ -28,12 +28,12 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
 
   useEffect(() => {
     validateCaptcha();
-  }, [captchaInput]);
+  }, [captchaInput, validateCaptcha]);
 
   return (
     <div className={styles.captcha}>
       <label>
-        Please prove that you're not a bot. Copy the generated content.
+        {`Please prove that you're not a bot. Copy the generated content.`}
       </label>
       <div className={styles.buttonContainer}>
         <Button

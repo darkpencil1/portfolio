@@ -13,8 +13,7 @@ import Captcha from "./Captcha";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<ContactData>({
-    first_name: "",
-    last_name: "",
+    name: "",
     email: "",
     message: "",
   });
@@ -39,8 +38,7 @@ const ContactForm = () => {
 
     if (state.success) {
       setFormData({
-        first_name: "",
-        last_name: "",
+        name: "",
         email: "",
         message: "",
       });
@@ -62,35 +60,20 @@ const ContactForm = () => {
         exit={{ translateX: 50, opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className={styles.name}>
-          <p>
-            <label htmlFor="first_name" className={styles.label}>
-              First Name
-            </label>
-            <input
-              className={styles.formElement}
-              type="text"
-              id="first_name"
-              name="first_name"
-              value={formData.first_name}
-              onChange={handleChange}
-              required
-            />
-          </p>
-          <p>
-            <label htmlFor="last_name" className={styles.label}>
-              Last Name (optional)
-            </label>
-            <input
-              className={styles.formElement}
-              type="text"
-              id="last_name"
-              name="last_name"
-              value={formData.last_name}
-              onChange={handleChange}
-            />
-          </p>
-        </div>
+        <p>
+          <label htmlFor="name" className={styles.label}>
+            Name
+          </label>
+          <input
+            className={styles.formElement}
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </p>
         <p>
           <label htmlFor="email" className={styles.label}>
             Email

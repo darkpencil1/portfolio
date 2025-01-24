@@ -36,24 +36,24 @@
   height: 200px;
   width: 400px;
   max-width: 400px;
+  min-width: 200px;
   max-height: 400px;
+  min-height: 100px;
+}
 
 .label {
   font-weight: var(--fw-semibold);
 }
 
-.errorDetail__container{
+.errorDetail__container {
   padding: 0;
-
-
 }
-.errorDetaili__title{
+.errorDetaili__title {
   margin: 0;
   padding: 0;
 }
 
-.errorDetail{
+.errorDetail {
   text-transform: capitalize;
   list-style-type: none;
-
 }
