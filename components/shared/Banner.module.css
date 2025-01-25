@@ -29,8 +29,35 @@
   font-weight: var(--fw-semibold);
 }
 
-@media (max-width: 1200) {
+@media (max-width: 1200px) {
   .banner {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    min-width: 350px;
+  }
+
+  .banner h1 {
+    font-size: var(--fs-xxl);
+    margin: var(--spacing-1) auto;
+  }
+
+  .banner p {
+    font-size: var(--fs-xl);
+    margin-top: 0;
+    font-weight: var(--fw-semibold);
+  }
+}
+
+@media (max-width: 370px) {
+  .banner {
+    min-width: 200px;
+  }
+
+  .banner p {
+    font-size: 1.4rem;
   }
 }

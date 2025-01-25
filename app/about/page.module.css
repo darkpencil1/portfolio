@@ -30,3 +30,25 @@
     flex-direction: column !important;
   }
 }
+
+@media (max-width: 700px) {
+  .page {
+    margin: 0 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .story__container {
+    max-width: 90vw;
+    overflow: wrap;
+  }
+  .story__img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .story__img {
+    width: 250px;
+  }
+}

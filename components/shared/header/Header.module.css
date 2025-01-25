@@ -133,3 +133,15 @@
     margin-right: var(--spacing-4);
   }
 }
+
+@media (max-width: 1000px) {
+  .title {
+    font-size: var(--fs-lg);
+  }
+}
+
+@media (max-width: 470px) {
+  .title {
+    font-size: var(--fs-md);
+  }
+}

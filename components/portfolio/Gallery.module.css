@@ -96,3 +96,9 @@
 .filterBtn > p:hover::after {
   width: 100%; /* Expand the width to 100% on hover */
 }
+
+@media (max-width: 400px) {
+  .gallery {
+    align-items: center;
+  }
+}

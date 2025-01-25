@@ -27,3 +27,18 @@
     width: 70vw;
   }
 }
+
+@media (max-width: 350px) {
+  .page {
+    margin: 0 1rem 2rem 1rem;
+  }
+
+  .greeting {
+    max-width: 80vw;
+    width: 80vw;
+  }
+
+  .greeting > p {
+    margin-bottom: 0;
+  }
+}
