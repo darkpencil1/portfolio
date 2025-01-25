@@ -3,7 +3,7 @@ import Banner from "@/components/shared/Banner";
 import Story from "@/components/about/Story";
 import styles from "./page.module.css";
 import Image from "next/image";
-import ringo from "@/public/ringo.png";
+import me from "@/public/images/me.jpg";
 import Row from "@/components/base/Row";
 
 const About: React.FC = () => {
@@ -18,12 +18,12 @@ const About: React.FC = () => {
         <div className={styles.story__imgContainer}>
           <Image
             className={styles.story__img}
-            src={ringo}
-            alt="This is definitely not me."
+            src={me}
+            alt="Here should be my face. Why it's not here?"
             key="ringo"
           />
 
-          <p className={styles.story__imgDesc}>This is definitely not me.</p>
+          <p className={styles.story__imgDesc}>Me: "Hello there!"</p>
         </div>
       </Row>
     </div>
