@@ -1,4 +1,4 @@
-# Art portfolio for my personal artwortk
+# Art portfolio for my personal artwork
 ## See at: https://www.villelahetkangas.fi/
 
 ### Notable tools used: 
