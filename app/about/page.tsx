@@ -23,7 +23,7 @@ const About: React.FC = () => {
             key="ringo"
           />
 
-          <p className={styles.story__imgDesc}>Me: "Hello there!"</p>
+          <p className={styles.story__imgDesc}>{`Me: "Hello there!"`}</p>
         </div>
       </Row>
     </div>
