@@ -134,7 +134,9 @@ const Header: React.FC = () => {
                   key={i}
                   data-cy="desktopLink"
                 >
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link href={item.href} scroll={true}>
+                    {item.name}
+                  </Link>
                 </motion.div>
               );
             })
@@ -178,6 +180,7 @@ const Header: React.FC = () => {
                         <Link
                           href={item.href}
                           onClick={() => setMenuOpen((prev) => !prev)}
+                          scroll={true}
                         >
                           {item.name}
                         </Link>
