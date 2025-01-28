@@ -26,7 +26,7 @@ const sendEmail = async (formData: ContactData): Promise<boolean> => {
     await transporter.sendMail({
       from: `"${name}" <${process.env.SITE_OWNER_EMAIL}>`,
       to: process.env.TARGET_EMAIL,
-      subject: "New Contact Form Submission",
+      subject: `Lomakeviesti - ${name}`,
       replyTo: email,
       text: `Hei, uusi viesti henkilöltä ${name} ${email}:\n\n${message}`,
       html: `
