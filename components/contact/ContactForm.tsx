@@ -20,8 +20,9 @@ const ContactForm = () => {
   const [isCaptchaValid, setIsCaptchaValid] = useState<boolean>(false);
   const [showPopup, setShowPopup] = useState<boolean>(false);
   const [state, action, isPending] = useActionState(submitForm, {
-    success: null,
-    error: null,
+    success: false,
+    error: false,
+    popupToggle: 0,
   } as ContactFormState);
 
   const handleChange = (
@@ -45,10 +46,10 @@ const ContactForm = () => {
       setShowPopup(true);
       timer = setTimeout(() => {
         setShowPopup(false);
-      }, 3000);
+      }, 4000);
     }
     return () => clearTimeout(timer);
-  }, [state.success, action]);
+  }, [state.success, state.popupToggle, action]);
 
   return (
     <AnimatePresence>

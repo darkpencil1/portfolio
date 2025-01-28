@@ -13,9 +13,9 @@ const sendEmail = async (formData: ContactData): Promise<boolean> => {
   const { name, email, message } = formData;
   // Set up the transporter
   const transporter = nodemailer.createTransport({
-    host: process.env.OUTLOOK_SMTP,
-    port: Number(process.env.OUTLOOK_PORT),
-    secure: false, // Use STARTTLS
+    host: process.env.EMAIL_HOST,
+    port: Number(process.env.EMAIL_PORT),
+    secure: false,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -24,10 +24,16 @@ const sendEmail = async (formData: ContactData): Promise<boolean> => {
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.SITE_OWNER_EMAIL, // Site owner's email
+      from: `"${name}" <${process.env.SITE_OWNER_EMAIL}>`,
+      to: process.env.TARGET_EMAIL,
       subject: "New Contact Form Submission",
-      text: message,
+      replyTo: email,
+      text: `Hei, uusi viesti henkilöltä ${name} ${email}:\n\n${message}`,
+      html: `
+        <p>Hei,</p>
+        <p>Uusi viesti henkilöltä <strong>${name}</strong> - <strong>${email}</strong>:</p>
+        <p>${message}</p>
+      `,
     });
 
     return true;
@@ -36,7 +42,7 @@ const sendEmail = async (formData: ContactData): Promise<boolean> => {
   }
 };
 const submitForm = async (
-  _previousState: ContactFormState,
+  prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> => {
   try {
@@ -51,13 +57,15 @@ const submitForm = async (
 
     if (ok) {
       return {
-        success: "Message sent succesfully.",
-        error: null,
+        success: true,
+        error: false,
+        popupToggle: prevState.popupToggle === 0 ? 1 : 0,
       };
     } else {
       return {
-        success: null,
-        error: "Failed to send message. Please try again.",
+        success: false,
+        error: true,
+        popupToggle: prevState.popupToggle,
       };
     }
   } catch (error) {
@@ -69,12 +77,13 @@ const submitForm = async (
       }));
 
       return {
-        success: null,
-        error: "Please check your input.",
+        success: false,
+        error: true,
+        popupToggle: prevState.popupToggle,
         errorDetails: errorMessages,
       };
     }
-    return { success: null, error: "An error occurred. Please try again." };
+    return { success: false, error: true, popupToggle: prevState.popupToggle };
   }
 };
 export { submitForm };

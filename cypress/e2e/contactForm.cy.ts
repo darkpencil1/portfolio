@@ -47,5 +47,8 @@ describe("Contact Form", () => {
     cy.contains("button", "Submit").click(); // Submit the form
     cy.wait("@submitForm");
     cy.getDataCy("popup").should("exist");
+    cy.wait(500);
+    //Check that popup disappears after a while
+    cy.getDataCy("popup").should("not.exist");
   });
 });
