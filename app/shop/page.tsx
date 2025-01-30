@@ -6,14 +6,14 @@ import IProduct from "@/types/ProductInterface";
 import Skeleton from "@/components/shared/Skeleton";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./page.module.css";
+import products from "@/resources/products";
 
 const Shop: React.FC = () => {
-  const products: IProduct[] = [];
   return (
     <div className={styles.page}>
       <ShopBanner />
       {/* Product rows */}
-      <Row className="product__wrapper">
+      <Row className={styles.product__wrapper}>
         <AnimatePresence>
           {!products &&
             Array.from({ length: 3 }).map((_, index) => (

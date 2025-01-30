@@ -1,0 +1,37 @@
+.product__imgContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: var(--br-full);
+}
+
+.product__img {
+  align-self: center;
+  max-width: 450px;
+  max-height: 390px;
+}
+
+@media (min-width: 1500px) {
+  .product__img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .product__img {
+    max-width: 400px;
+  }
+}
+
+@media (max-height: 1100px) {
+  .product__img {
+    max-height: 390px;
+  }
+}
+
+@media (max-height: 950px) {
+  .product__img {
+    max-height: 350px;
+  }
+}
