@@ -10,6 +10,10 @@ export enum ProductType {
   POSTER = "Poster",
 }
 
+export type ProductPrice = {
+  [key: string]: number;
+};
+
 interface IProduct {
   id: number;
   name: string;
@@ -20,7 +24,7 @@ interface IProduct {
   imageUrl: StaticImageData;
   preview: StaticImageData; //Low res image used to display blurred version while main img loads
   images: StaticImageData[];
-  price: number;
+  price: ProductPrice[];
   orientation: Orientation;
 }
 export default IProduct;

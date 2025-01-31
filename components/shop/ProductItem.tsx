@@ -40,7 +40,7 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
         <Row className={styles.product__priceAndButton}>
           <div className={styles.product__price}>
             <span>from &nbsp;</span>
-            <h4>{price}€</h4>
+            <h4>{Object.values(price[0])}€</h4>
           </div>
           <Button
             className={styles.product__cta}

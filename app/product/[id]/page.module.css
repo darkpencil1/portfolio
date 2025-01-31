@@ -4,7 +4,7 @@
   margin-bottom: 100px;
 }
 
-.product__wrapper {
+.product__container {
   margin: auto;
   width: 95%;
   background-color: var(--color-white);
@@ -12,19 +12,12 @@
   border-right: 2px solid var(--color-primary);
   border-bottom: 2px solid var(--color-primary);
   box-shadow: 0 0 10px var(--color-primary);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 1rem;
-  padding: 20px;
-}
-.product__container {
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 1800px;
   max-height: 750px;
+
+  padding: 20px;
 }
 
 .product__imgContainer {

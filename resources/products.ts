@@ -1,5 +1,8 @@
 import IProduct, { Orientation, ProductType } from "../types/ProductInterface";
 import boy from "@/public/images/boy.jpg";
+import gouache_woman from "@/public/images/gouache-3.jpg";
+import gouache_wall from "@/public/images/assets/gouache-wall.png";
+import boy_wall from "@/public/images/assets/boy-wall.png";
 import boy_preview from "@/public/images/boy-preview.jpg";
 
 const products: IProduct[] = [
@@ -7,13 +10,14 @@ const products: IProduct[] = [
     id: 1,
     name: "Portrait drawing",
     productType: ProductType.COMMISSION,
-    primer: "Fill with text",
-    description: "Lorem impsum dolor...",
+    primer: "A portrait of a subject of your choosing.",
+    description:
+      "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like to see as a drawing. Send me a message of what you have in mind and let's get started.",
     snapshot: "Get a drawing of yourself or your loved ones.",
     imageUrl: boy,
     preview: boy_preview,
-    images: [boy],
-    price: 100,
+    images: [boy, boy_wall],
+    price: [{ A4: 100 }, { A3: 130 }],
     orientation: Orientation.PORTRAIT,
   },
 
@@ -21,13 +25,14 @@ const products: IProduct[] = [
     id: 2,
     name: "Portrait painting",
     productType: ProductType.COMMISSION,
-    primer: "Fill with text",
-    description: "Lorem impsum dolor...",
+    primer: "Gouache portrait of a subject of your choosing.",
+    description:
+      "A portrait painting where subject can be anything from you, your family member or your dog or a favourite character. It's up to you! I'll work from photos, so pick at least one you'd like me to base the painting on. Send me a message of what you have in mind or if you have any questions and let's get started.",
     snapshot: "Get a portrait painting of yourself or your loved ones.",
-    imageUrl: boy,
+    imageUrl: gouache_woman,
     preview: boy_preview,
-    images: [],
-    price: 200,
+    images: [gouache_woman, gouache_wall],
+    price: [{ A4: 200 }, { A3: 250 }],
     orientation: Orientation.PORTRAIT,
   },
 ];

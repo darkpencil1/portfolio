@@ -38,7 +38,8 @@
 .product__textContainer {
   width: calc(var(--col-6) - 10px); /* content_gap */
   display: flex;
-  flex-direction: column;
+  /*Add important flag since page navigation forces row attribute to it. */
+  flex-direction: column !important;
   justify-content: space-between;
   text-align: center;
   padding: 30px;

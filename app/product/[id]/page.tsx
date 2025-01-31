@@ -12,14 +12,12 @@ const ProductPage = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className={styles.page}>
-      <div className={styles.product__wrapper}>
-        <Row className={styles.product__container}>
-          <div className={styles.product__imgContainer}>
-            <ProductImgContainer product={product} />
-          </div>
-          <ProductText product={product} />
-        </Row>
-      </div>
+      <Row className={styles.product__container}>
+        <div className={styles.product__imgContainer}>
+          <ProductImgContainer product={product} />
+        </div>
+        <ProductText product={product} />
+      </Row>
     </div>
   );
 };

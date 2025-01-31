@@ -3,12 +3,12 @@
   max-height: 600px;
 }
 
-.text__container > h2 {
+.product__textContainer > h2 {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.product__textclass {
+.product__text {
   text-transform: capitalize;
   margin-bottom: 0px;
   margin-top: 0;
@@ -24,4 +24,17 @@
   margin-top: 0;
   margin-bottom: 10px;
   font-style: italic;
+}
+
+.product__price {
+  margin-bottom: 40px;
+}
+
+.product__priceTitle {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.product__price > p {
+  margin: 0;
 }

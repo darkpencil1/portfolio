@@ -4,12 +4,14 @@
   align-content: center;
   align-items: center;
   border-radius: var(--br-full);
+  min-height: 390px;
 }
 
 .product__img {
   align-self: center;
   max-width: 450px;
   max-height: 390px;
+  border-radius: var(--br-medium);
 }
 
 @media (min-width: 1500px) {

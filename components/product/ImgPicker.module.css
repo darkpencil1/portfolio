@@ -9,7 +9,7 @@
   width: 100%;
   overflow-y: hidden;
   gap: 1rem 0;
-  background-color: var(--color--bg);
+  background-color: var(--color-bg);
   border-radius: 0 0 var(--br-large) var(--br-large);
 }
 
@@ -37,10 +37,10 @@
 }
 
 .imgPicker__imgContainer_selected {
-  background-color: var(--color--light-gray);
+  background-color: var(--color-light-gray);
 }
 .imgPicker__imgContainer_selected:hover {
-  background-color: var(--color--light-gray);
+  background-color: var(--color-light-gray);
 }
 
 .picker__thumbnailImg {

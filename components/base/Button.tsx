@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import styles from "./Button.module.css";
 import { ReactNode } from "react";
