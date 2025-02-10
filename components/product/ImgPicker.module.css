@@ -57,3 +57,20 @@
   border-radius: var(--br-small);
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .imgPicker {
+    height: 120px;
+    max-height: 120px;
+    margin: 0;
+  }
+
+  .imgPicker__container {
+    height: 100px;
+    max-height: 100px;
+  }
+
+  .imgPicker__imgContainer {
+    height: 90px;
+  }
+}

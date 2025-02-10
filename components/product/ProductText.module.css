@@ -38,3 +38,10 @@
 .product__price > p {
   margin: 0;
 }
+
+@media (max-width: 800px) {
+  .product__textContainer {
+    width: var(--col-11);
+    max-height: 600px;
+  }
+}

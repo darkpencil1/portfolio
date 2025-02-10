@@ -16,7 +16,6 @@
   flex-wrap: wrap;
   max-width: 1800px;
   max-height: 750px;
-
   padding: 20px;
 }
 
@@ -24,4 +23,26 @@
   width: var(--col-6);
   max-width: var(--col-6);
   max-height: 700px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .product__container {
+    max-height: 100%;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .product__imgContainer {
+    width: var(--col-11);
+    max-width: var(--col-11);
+    height: 400px;
+    max-height: 400px;
+  }
 }

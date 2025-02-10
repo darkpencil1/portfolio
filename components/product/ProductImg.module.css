@@ -26,14 +26,27 @@
   }
 }
 
-@media (max-height: 1100px) {
+@media (max-width: 1100px) {
   .product__img {
     max-height: 390px;
   }
 }
 
-@media (max-height: 950px) {
+@media (max-width: 950px) {
   .product__img {
     max-height: 350px;
+  }
+}
+
+@media (max-width: 800px) {
+  .product__img {
+    max-height: 200px;
+    min-height: 200px;
+  }
+
+  .product__imgContainer {
+    align-items: start;
+    justify-content: start;
+    min-height: 200px;
   }
 }

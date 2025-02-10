@@ -8,21 +8,6 @@ import boy_preview from "@/public/images/boy-preview.jpg";
 const products: IProduct[] = [
   {
     id: 1,
-    name: "Portrait drawing",
-    productType: ProductType.COMMISSION,
-    primer: "A portrait of a subject of your choosing.",
-    description:
-      "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like to see as a drawing. Send me a message of what you have in mind and let's get started.",
-    snapshot: "Get a drawing of yourself or your loved ones.",
-    imageUrl: boy,
-    preview: boy_preview,
-    images: [boy, boy_wall],
-    price: [{ A4: 100 }, { A3: 130 }],
-    orientation: Orientation.PORTRAIT,
-  },
-
-  {
-    id: 2,
     name: "Portrait painting",
     productType: ProductType.COMMISSION,
     primer: "Gouache portrait of a subject of your choosing.",
@@ -32,7 +17,21 @@ const products: IProduct[] = [
     imageUrl: gouache_woman,
     preview: boy_preview,
     images: [gouache_woman, gouache_wall],
-    price: [{ A4: 200 }, { A3: 250 }],
+    price: [{ A4: 250 }, { A3: 300 }],
+    orientation: Orientation.PORTRAIT,
+  },
+  {
+    id: 2,
+    name: "Portrait drawing",
+    productType: ProductType.COMMISSION,
+    primer: "A portrait of a subject of your choosing.",
+    description:
+      "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like me to use as a reference. Send me a message of what you have in mind and let's get started!",
+    snapshot: "Get a drawing of yourself or your loved ones.",
+    imageUrl: boy,
+    preview: boy_preview,
+    images: [boy, boy_wall],
+    price: [{ A4: 150 }, { A3: 200 }],
     orientation: Orientation.PORTRAIT,
   },
 ];
