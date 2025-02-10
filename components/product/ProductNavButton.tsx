@@ -9,7 +9,11 @@ const ProductNavButton = () => {
   const handleClick = () => {
     router.push(`/contact`);
   };
-  return <Button onClick={handleClick}>Contact me</Button>;
+  return (
+    <Button onClick={handleClick} dataCy="product-nav-button">
+      Contact me
+    </Button>
+  );
 };
 
 export default ProductNavButton;

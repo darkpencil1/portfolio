@@ -24,6 +24,7 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
       className={styles.productItem}
+      dataCy="product-item"
     >
       <Col className={styles.product__imgContainer}>
         <Image
