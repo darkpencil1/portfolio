@@ -22,7 +22,7 @@ const ProductImg = ({ selectedImg }: ProductImgProps) => {
   return (
     <motion.div
       className={styles.product__imgContainer}
-      animate={{ translateY: [30, 0] }}
+      animate={{ opacity: [0, 1] }}
       transition={{ duration: 0.4 }}
       key={key}
     >

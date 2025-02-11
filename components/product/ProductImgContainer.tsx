@@ -10,7 +10,9 @@ const ProductImgContainer = ({ product }: { product: IProduct }) => {
   const [selectedImg, setSelectedImg] = React.useState(product?.images[0]);
 
   useEffect(() => {
-    product && setSelectedImg(product.images[0]);
+    if (product) {
+      setSelectedImg(product.images[0]);
+    }
   }, [product]);
 
   return (

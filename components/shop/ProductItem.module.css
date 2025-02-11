@@ -115,29 +115,29 @@
   .product__img {
     padding: 10px;
   }
+}
 
 @media (max-width: 500px) {
-  .product__title{
+  .product__title {
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 450px) {
-  .product__textContainer{
+  .product__textContainer {
     padding-left: 0;
     padding-right: 0;
-
   }
-  .product__title{
+  .product__title {
     font-size: 1.25rem;
     white-space: nowrap;
   }
 
-  .product__text{
+  .product__text {
     font-size: var(--fs-md);
   }
 
-  .product__price{
+  .product__price {
     font-size: var(--fs-md);
   }
 }

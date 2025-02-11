@@ -5,9 +5,12 @@ import styles from "./page.module.css";
 import products from "@/resources/products";
 import { notFound } from "next/navigation";
 
-const ProductPage = ({ params }: { params: { id: string } }) => {
+type ProductPageParams = Promise<{ id: string }>;
+
+const ProductPage = async ({ params }: { params: ProductPageParams }) => {
+  const { id } = await params;
   // Convert id to a number (if necessary)
-  const product = products.find((item) => item.id === Number(params.id));
+  const product = products.find((item) => item.id === Number(id));
   if (!product) return notFound();
 
   return (
