@@ -26,19 +26,20 @@
 
 .product__img {
   object-fit: contain;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 280px;
+  max-height: 280px;
   border-radius: var(--br-medium);
 }
 
-.product__img--tag {
+.product__imgTag {
   width: 300px;
 }
 
 .product__textContainer {
   width: calc(var(--col-6) - 10px); /* content_gap */
   display: flex;
-  flex-direction: column;
+  /*Add important flag since page navigation forces row attribute to it. */
+  flex-direction: column !important;
   justify-content: space-between;
   text-align: center;
   padding: 30px;
@@ -47,18 +48,19 @@
 
 .product__type {
   margin: 0;
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
+  text-decoration: underline;
 }
 
 .product__text {
   margin: 0 auto var(--spacing-1);
+  font-size: var(--fs-xl);
 }
 
 .product__title {
   width: auto;
   margin: 0 auto var(--spacing-2);
   margin-bottom: 0;
-  font-size: var(--font-lg);
   line-height: 1.2;
 }
 
@@ -66,7 +68,7 @@
   margin: 0 auto;
 }
 
-.product__price-and-button {
+.product__priceAndButton {
   display: flex;
   justify-content: space-between;
 }
@@ -75,8 +77,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: var(--fs-xl);
 }
 
 .product__price > h4 {
   margin: 0;
+}
+
+@media (max-width: 1800px) {
+  .product__priceAndButton {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  .product__textContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .productItem {
+    flex-direction: column;
+    max-width: 95%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product__priceAndButton {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  .product__textContainer {
+    width: 80%;
+  }
+  .product__img {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .product__title {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .product__textContainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .product__title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+
+  .product__text {
+    font-size: var(--fs-md);
+  }
+
+  .product__price {
+    font-size: var(--fs-md);
+  }
 }

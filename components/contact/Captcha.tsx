@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Button from "../base/Button";
 import styles from "./Captcha.module.css";
 
@@ -20,11 +20,13 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
     setCaptcha(result);
   };
 
-  const validateCaptcha = () => {
+  const validateCaptcha = useCallback(() => {
     if (captcha !== "" && captcha !== null) {
       setIsCaptchaValid(captcha === captchaInput);
-    } else setIsCaptchaValid(false);
-  };
+    } else {
+      setIsCaptchaValid(false);
+    }
+  }, [captcha, captchaInput, setIsCaptchaValid]);
 
   useEffect(() => {
     validateCaptcha();

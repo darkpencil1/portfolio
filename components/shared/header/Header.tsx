@@ -31,15 +31,15 @@ const navItems: Array<NavItem> = [
     name: "Artwork",
   },
   {
-    href: "about",
+    href: "/about",
     name: "About",
   },
   {
-    href: "contact",
+    href: "/contact",
     name: "Contact",
   },
   {
-    href: "shop",
+    href: "/shop",
     name: "Shop",
   },
 ];

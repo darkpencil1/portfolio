@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import styles from "./Button.module.css";
 import { ReactNode } from "react";
@@ -12,6 +13,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   onClick?: ((e: React.MouseEvent<HTMLButtonElement>) => void) | (() => void);
   disabled?: boolean;
+  dataCy?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
   disabled,
+  dataCy,
 }) => {
   const btnClassName = `${className} ${styles.button} ${
     styles[`button--${btnType}`]
@@ -33,6 +36,7 @@ const Button: React.FC<ButtonProps> = ({
       className={btnClassName}
       onClick={onClick}
       disabled={disabled}
+      data-cy={dataCy}
     >
       {children}
     </motion.button>
