@@ -5,12 +5,12 @@ type CypressArtwork = Omit<Artwork, "img">;
 const artwork: CypressArtwork[] = [
   {
     id: "1",
-    category: "digital",
+    category: "painting",
   },
 
   {
     id: "2",
-    category: "digital",
+    category: "painting",
   },
   {
     id: "3",
@@ -19,12 +19,28 @@ const artwork: CypressArtwork[] = [
 
   {
     id: "4",
-    category: "drawing",
+    category: "digital",
+  },
+  {
+    id: "5",
+    category: "digital",
+  },
+  {
+    id: "6",
+    category: "digital",
+  },
+  {
+    id: "7",
+    category: "digital",
   },
 
   {
-    id: "5",
-    category: "painting",
+    id: "8",
+    category: "digital",
+  },
+  {
+    id: "9",
+    category: "drawing",
   },
 ];
 

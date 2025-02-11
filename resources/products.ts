@@ -1,7 +1,8 @@
 import IProduct, { Orientation, ProductType } from "../types/ProductInterface";
 import boy from "@/public/images/boy.jpg";
+import gouache_girl from "@/public/images/guassi-4.png";
 import gouache_woman from "@/public/images/gouache-3.jpg";
-import gouache_wall from "@/public/images/assets/gouache-wall.png";
+import gouache_wall from "@/public/images/assets/gouache-wall-2.png";
 import boy_wall from "@/public/images/assets/boy-wall.png";
 import boy_preview from "@/public/images/boy-preview.jpg";
 
@@ -14,9 +15,9 @@ const products: IProduct[] = [
     description:
       "A portrait painting where subject can be anything from you, your family member or your dog or a favourite character. It's up to you! I'll work from photos, so pick at least one you'd like me to base the painting on. Send me a message of what you have in mind or if you have any questions and let's get started.",
     snapshot: "Get a portrait painting of yourself or your loved ones.",
-    imageUrl: gouache_woman,
+    imageUrl: gouache_girl,
     preview: boy_preview,
-    images: [gouache_woman, gouache_wall],
+    images: [gouache_girl, gouache_woman, gouache_wall],
     price: [{ A4: 250 }, { A3: 300 }],
     orientation: Orientation.PORTRAIT,
   },
