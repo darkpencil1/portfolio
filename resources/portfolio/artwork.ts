@@ -8,6 +8,7 @@ import school from "@/public/images/school.jpg";
 import boy from "@/public/images/boy.jpg";
 import gouache_3 from "@/public/images/gouache-3.jpg";
 import gouache_4 from "@/public/images/guassi-4.png";
+import gouache_5 from "@/public/images/guassi-5.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -15,46 +16,50 @@ const artwork: Artwork[] = [
     img: gouache_4,
     category: "painting",
   },
-
   {
     id: "2",
-    img: gouache_3,
+    img: gouache_5,
     category: "painting",
   },
   {
     id: "3",
+    img: gouache_3,
+    category: "painting",
+  },
+  {
+    id: "4",
     img: visionbakers_bay,
     category: "digital",
   },
 
   {
-    id: "4",
+    id: "5",
     img: oracle,
     category: "digital",
   },
   {
-    id: "5",
+    id: "6",
     img: bringo,
     category: "digital",
   },
   {
-    id: "6",
+    id: "7",
     img: explorer,
     category: "digital",
   },
   {
-    id: "7",
+    id: "8",
     img: taidonjahti,
     category: "digital",
   },
 
   {
-    id: "8",
+    id: "9",
     img: school,
     category: "digital",
   },
   {
-    id: "9",
+    id: "10",
     img: boy,
     category: "drawing",
   },
