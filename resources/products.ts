@@ -1,6 +1,6 @@
 import IProduct, { Orientation, ProductType } from "../types/ProductInterface";
 import boy from "@/public/images/boy.jpg";
-import gouache_girl from "@/public/images/guassi-4.png";
+import gouache_girl from "@/public/images/guassi-4.jpg";
 import gouache_woman from "@/public/images/gouache-3.jpg";
 import gouache_wall from "@/public/images/assets/gouache-wall-2.png";
 import boy_wall from "@/public/images/assets/boy-wall.png";

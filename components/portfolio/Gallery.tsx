@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 type ExtendedCategory = ArtCategory | "all";
-const topics: ExtendedCategory[] = ["all", "drawing", "painting", "digital"];
+const topics: ExtendedCategory[] = ["all", "painting", "digital", "drawing"];
 const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<string>("all");
   const [isModalOpen, setIsModalOpen] = useState(false);

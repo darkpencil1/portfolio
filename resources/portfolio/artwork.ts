@@ -7,7 +7,7 @@ import taidonjahti from "@/public/images/taidonjahti.jpg";
 import school from "@/public/images/school.jpg";
 import boy from "@/public/images/boy.jpg";
 import gouache_3 from "@/public/images/gouache-3.jpg";
-import gouache_4 from "@/public/images/guassi-4.png";
+import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_5 from "@/public/images/guassi-5.jpg";
 
 const artwork: Artwork[] = [
