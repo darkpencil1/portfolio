@@ -13,7 +13,7 @@ const pageLinks: Array<FooterLink> = [
 ];
 
 const socialLinks: Array<FooterLink> = [
-  { text: "Instagram", link: "https://www.instagram.com/darkpencil1/" },
+  { text: "Instagram", link: "https://www.instagram.com/villelahetkangas/" },
 ];
 
 const Footer = () => {
