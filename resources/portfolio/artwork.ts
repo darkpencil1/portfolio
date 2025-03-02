@@ -9,11 +9,17 @@ import boy from "@/public/images/boy.jpg";
 import gouache_3 from "@/public/images/gouache-3.jpg";
 import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_5 from "@/public/images/guassi-5.jpg";
+import gouache_6 from "@/public/images/guassi-6.jpg";
 
 const artwork: Artwork[] = [
   {
     id: "1",
     img: gouache_4,
+    category: "painting",
+  },
+  {
+    id: "11",
+    img: gouache_6,
     category: "painting",
   },
   {
