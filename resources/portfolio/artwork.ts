@@ -8,23 +8,31 @@ import school from "@/public/images/school.jpg";
 import boy from "@/public/images/boy.jpg";
 import gouache_3 from "@/public/images/gouache-3.jpg";
 import gouache_4 from "@/public/images/guassi-4.jpg";
-import gouache_5 from "@/public/images/guassi-5.jpg";
 import gouache_6 from "@/public/images/guassi-6.jpg";
+import lida from "@/public/images/lida.jpg";
+import tom from "@/public/images/tom.jpg";
+import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
+import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 
 const artwork: Artwork[] = [
+  {
+    id: "12",
+    img: lida,
+    category: "painting",
+  },
   {
     id: "1",
     img: gouache_4,
     category: "painting",
   },
   {
-    id: "11",
-    img: gouache_6,
+    id: "13",
+    img: tom,
     category: "painting",
   },
   {
-    id: "2",
-    img: gouache_5,
+    id: "11",
+    img: gouache_6,
     category: "painting",
   },
   {
@@ -67,6 +75,17 @@ const artwork: Artwork[] = [
   {
     id: "10",
     img: boy,
+    category: "drawing",
+  },
+  {
+    id: "14",
+    img: prudhon_study,
+    category: "drawing",
+  },
+
+  {
+    id: "15",
+    img: master_study_2,
     category: "drawing",
   },
 ];
