@@ -11,6 +11,7 @@ import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_6 from "@/public/images/guassi-6.jpg";
 import lida from "@/public/images/lida.jpg";
 import tom from "@/public/images/tom.jpg";
+import sacha from "@/public/images/sacha.jpg";
 import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
 import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 
@@ -31,6 +32,11 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "16",
+    img: sacha,
+    category: "painting",
+  },
+  {
     id: "11",
     img: gouache_6,
     category: "painting",
@@ -45,7 +51,6 @@ const artwork: Artwork[] = [
     img: visionbakers_bay,
     category: "digital",
   },
-
   {
     id: "5",
     img: oracle,
@@ -66,7 +71,6 @@ const artwork: Artwork[] = [
     img: taidonjahti,
     category: "digital",
   },
-
   {
     id: "9",
     img: school,
@@ -82,7 +86,6 @@ const artwork: Artwork[] = [
     img: prudhon_study,
     category: "drawing",
   },
-
   {
     id: "15",
     img: master_study_2,
