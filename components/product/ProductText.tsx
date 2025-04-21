@@ -20,7 +20,7 @@ const ProductText = ({ product }: { product: IProduct }) => {
         <p className={styles.product__textPrimer}>{product?.primer}</p>
         <p className={styles.product__textDesc}>{product?.description}</p>
         <p className={styles.product__info}>
-          Estimated time: <b>2 weeks</b>
+          Estimated time: <b>1 week</b>
         </p>
         <p className={styles.product__info}>
           Frames: <b>Included</b>
