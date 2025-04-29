@@ -13,23 +13,29 @@ import lida from "@/public/images/lida.jpg";
 import tom from "@/public/images/tom.jpg";
 import sacha from "@/public/images/sacha.jpg";
 import milo from "@/public/images/milo.jpg";
+import huhtikuu from "@/public/images/huhtikuu.jpg";
 import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
 import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 
 const artwork: Artwork[] = [
+  {
+    id: "18",
+    img: huhtikuu,
+    category: "painting",
+  },
   {
     id: "12",
     img: lida,
     category: "painting",
   },
   {
-    id: "1",
-    img: gouache_4,
+    id: "17",
+    img: milo,
     category: "painting",
   },
   {
-    id: "17",
-    img: milo,
+    id: "1",
+    img: gouache_4,
     category: "painting",
   },
   {

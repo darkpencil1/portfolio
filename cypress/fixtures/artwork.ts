@@ -4,15 +4,19 @@ type CypressArtwork = Omit<Artwork, "img">;
 
 const artwork: CypressArtwork[] = [
   {
+    id: "18",
+    category: "painting",
+  },
+  {
     id: "12",
     category: "painting",
   },
   {
-    id: "1",
+    id: "17",
     category: "painting",
   },
   {
-    id: "17",
+    id: "1",
     category: "painting",
   },
   {
