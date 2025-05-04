@@ -23,9 +23,6 @@ const ProductText = ({ product }: { product: IProduct }) => {
           Estimated time: <b>1 week</b>
         </p>
         <p className={styles.product__info}>
-          Frames: <b>Included</b>
-        </p>
-        <p className={styles.product__info}>
           Shipping: <b>within Finland</b>
         </p>
 
