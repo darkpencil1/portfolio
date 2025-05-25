@@ -6,12 +6,12 @@ import explorer from "@/public/images/explorer.jpg";
 import taidonjahti from "@/public/images/taidonjahti.jpg";
 import school from "@/public/images/school.jpg";
 import boy from "@/public/images/boy.jpg";
-import gouache_3 from "@/public/images/gouache-3.jpg";
 import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_6 from "@/public/images/guassi-6.jpg";
 import lida from "@/public/images/lida.jpg";
 import tom from "@/public/images/tom.jpg";
 import sacha from "@/public/images/sacha.jpg";
+import olia from "@/public/images/olia.jpg";
 import milo from "@/public/images/milo.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
 import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
@@ -34,6 +34,11 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "19",
+    img: olia,
+    category: "painting",
+  },
+  {
     id: "1",
     img: gouache_4,
     category: "painting",
@@ -51,11 +56,6 @@ const artwork: Artwork[] = [
   {
     id: "11",
     img: gouache_6,
-    category: "painting",
-  },
-  {
-    id: "3",
-    img: gouache_3,
     category: "painting",
   },
   {
