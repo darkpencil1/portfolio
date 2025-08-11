@@ -4,8 +4,8 @@ import visionbakers_bay from "@/public/images/visionbakers-bay.jpg";
 import oracle from "@/public/images/oracle.jpg";
 import explorer from "@/public/images/explorer.jpg";
 import taidonjahti from "@/public/images/taidonjahti.jpg";
+import laezel from "public/images/laezel.jpg";
 import school from "@/public/images/school.jpg";
-import boy from "@/public/images/boy.jpg";
 import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_6 from "@/public/images/guassi-6.jpg";
 import lida from "@/public/images/lida.jpg";
@@ -16,6 +16,7 @@ import milo from "@/public/images/milo.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
 import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
 import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
+import partanaama from "@/public/images/partanaama.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -31,6 +32,11 @@ const artwork: Artwork[] = [
   {
     id: "17",
     img: milo,
+    category: "painting",
+  },
+  {
+    id: "20",
+    img: partanaama,
     category: "painting",
   },
   {
@@ -90,7 +96,7 @@ const artwork: Artwork[] = [
   },
   {
     id: "10",
-    img: boy,
+    img: laezel,
     category: "drawing",
   },
   {
