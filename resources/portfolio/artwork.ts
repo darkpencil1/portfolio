@@ -5,6 +5,7 @@ import oracle from "@/public/images/oracle.jpg";
 import explorer from "@/public/images/explorer.jpg";
 import taidonjahti from "@/public/images/taidonjahti.jpg";
 import laezel from "public/images/laezel.jpg";
+import shadowheart from "public/images/shadowheart.jpg";
 import school from "@/public/images/school.jpg";
 import gouache_4 from "@/public/images/guassi-4.jpg";
 import gouache_6 from "@/public/images/guassi-6.jpg";
@@ -97,6 +98,11 @@ const artwork: Artwork[] = [
   {
     id: "10",
     img: laezel,
+    category: "drawing",
+  },
+  {
+    id: "21",
+    img: shadowheart,
     category: "drawing",
   },
   {
