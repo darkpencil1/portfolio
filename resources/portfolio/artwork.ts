@@ -18,6 +18,10 @@ import huhtikuu from "@/public/images/huhtikuu.jpg";
 import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
 import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
+import mummi from "@/public/images/mummi.jpg";
+import recliner from "@/public/images/recliner.jpg";
+import woman_oil_1 from "@/public/images/woman-oil-1.jpg";
+import hattupaa from "@/public/images/hattupaa.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -38,6 +42,21 @@ const artwork: Artwork[] = [
   {
     id: "20",
     img: partanaama,
+    category: "painting",
+  },
+  {
+    id: "25",
+    img: mummi,
+    category: "painting",
+  },
+  {
+    id: "22",
+    img: woman_oil_1,
+    category: "painting",
+  },
+  {
+    id: "24",
+    img: hattupaa,
     category: "painting",
   },
   {
@@ -63,6 +82,11 @@ const artwork: Artwork[] = [
   {
     id: "11",
     img: gouache_6,
+    category: "painting",
+  },
+  {
+    id: "23",
+    img: recliner,
     category: "painting",
   },
   {
