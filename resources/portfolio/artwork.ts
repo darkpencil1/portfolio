@@ -20,8 +20,7 @@ import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
 import mummi from "@/public/images/mummi.jpg";
 import recliner from "@/public/images/recliner.jpg";
-import woman_oil_1 from "@/public/images/woman-oil-1.jpg";
-import hattupaa from "@/public/images/hattupaa.jpg";
+import tytto from "@/public/images/tytto-web.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -40,23 +39,18 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "22",
+    img: tytto,
+    category: "painting",
+  },
+  {
     id: "20",
     img: partanaama,
     category: "painting",
   },
   {
-    id: "25",
-    img: mummi,
-    category: "painting",
-  },
-  {
-    id: "22",
-    img: woman_oil_1,
-    category: "painting",
-  },
-  {
     id: "24",
-    img: hattupaa,
+    img: mummi,
     category: "painting",
   },
   {
