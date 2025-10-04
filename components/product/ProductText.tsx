@@ -27,9 +27,12 @@ const ProductText = ({ product }: { product: IProduct }) => {
         </p>
 
         <p
-          className={styles.product__info}
+          className={styles.product__info_price}
           dangerouslySetInnerHTML={{ __html: generatePriceString() }}
         ></p>
+        <p className={styles.product__info_priceHead}>
+          (+100€ for each additional head)
+        </p>
       </div>
       <ProductNavButton />
     </div>

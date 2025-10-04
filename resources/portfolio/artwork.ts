@@ -21,6 +21,8 @@ import partanaama from "@/public/images/partanaama.jpg";
 import mummi from "@/public/images/mummi.jpg";
 import recliner from "@/public/images/recliner.jpg";
 import tytto from "@/public/images/tytto-web.jpg";
+import kissat from "@/public/images/kissat.jpg";
+import female_1 from "@/public/images/female-1.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -54,6 +56,11 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "25",
+    img: kissat,
+    category: "painting",
+  },
+  {
     id: "19",
     img: olia,
     category: "painting",
@@ -76,6 +83,11 @@ const artwork: Artwork[] = [
   {
     id: "11",
     img: gouache_6,
+    category: "painting",
+  },
+  {
+    id: "26",
+    img: female_1,
     category: "painting",
   },
   {

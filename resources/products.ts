@@ -1,6 +1,6 @@
 import IProduct, { Orientation, ProductType } from "../types/ProductInterface";
 import lida from "@/public/images/lida.jpg";
-import milo from "@/public/images/milo.jpg";
+import kissat from "@/public/images/kissat.jpg";
 import gouache_wall from "@/public/images/assets/gouache-wall-2.png";
 import boy_wall from "@/public/images/assets/boy-wall.png";
 import shadowheart from "@/public/images/shadowheart.jpg";
@@ -16,7 +16,7 @@ const products: IProduct[] = [
     snapshot: "Get a portrait painting of yourself or your loved ones.",
     imageUrl: lida,
     preview: lida,
-    images: [lida, milo, gouache_wall],
+    images: [lida, kissat, gouache_wall],
     price: [{ A4: 250 }, { A3: 300 }],
     orientation: Orientation.PORTRAIT,
   },
