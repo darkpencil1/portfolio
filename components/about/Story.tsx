@@ -7,7 +7,7 @@ const Story = () => {
       <p>
         {`My name is Ville Lähetkangas. I'm a portrait and character artist based in Helsinki,
         Finland. I originally did mainly digital art, but since then I've taken a
-        turn into traditional painting with gouache. Alongside painting I enjoy very much just drawing with charcoal. Thanks for visiting the site, feel free to drop me a message from the 
+        turn into traditional painting with oils and gouache. I also share my drawings here, they are something I enjoy doing a lot. Thanks for visiting the site, feel free to drop me a message from the 
         contact section :)`}
         <br />
       </p>

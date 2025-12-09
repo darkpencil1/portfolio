@@ -15,14 +15,16 @@ import sacha from "@/public/images/sacha.jpg";
 import olia from "@/public/images/olia.jpg";
 import milo from "@/public/images/milo.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
-import prudhon_study from "@/public/images/master-study-drawing-1.jpg";
-import master_study_2 from "@/public/images/master-study-drawing-2.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
 import mummi from "@/public/images/mummi.jpg";
 import recliner from "@/public/images/recliner.jpg";
 import tytto from "@/public/images/tytto-web.jpg";
 import kissat from "@/public/images/kissat.jpg";
 import female_1 from "@/public/images/female-1.jpg";
+import erik_figure_1 from "@/public/images/erik-gist-fig-1-web.jpg";
+import erik_figure_2 from "@/public/images/erik-gist-fig-2-web.jpg";
+import erik_head from "@/public/images/erik-gist-1-web.jpg";
+import wedding from "@/public/images/wedding.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -58,6 +60,11 @@ const artwork: Artwork[] = [
   {
     id: "25",
     img: kissat,
+    category: "painting",
+  },
+  {
+    id: "27",
+    img: wedding,
     category: "painting",
   },
   {
@@ -136,13 +143,18 @@ const artwork: Artwork[] = [
     category: "drawing",
   },
   {
+    id: "28",
+    img: erik_head,
+    category: "drawing",
+  },
+  {
     id: "14",
-    img: prudhon_study,
+    img: erik_figure_1,
     category: "drawing",
   },
   {
     id: "15",
-    img: master_study_2,
+    img: erik_figure_2,
     category: "drawing",
   },
 ];
