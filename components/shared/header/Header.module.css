@@ -5,7 +5,53 @@
   padding-right: 20px;
   display: flex;
   flex-direction: row;
+
+.header__langButton {
+  /* larger icon-only flag button; border removed per request */
+  background: transparent;
+  color: inherit;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border: none; /* border removed */
+   font-weight: var(--fw-semibold);
+
+
+}
+
+.header__langButton:hover {
+  transform: scale(1.04);
+  border: none; /* ensure no border on hover */
+  outline: none; /* no outline when hovering with mouse */
+}
+
+.header__langButton:active {
+  border: none; /* ensure no border when clicking */
+  outline: none;
+}
+
+/* Only show the focus ring for keyboard users */
+.header__langButton:focus-visible {
+  outline: 3px solid rgba(65,84,255,0.12);
+  outline-offset: 2px;
+}
+
+.flagImg {
+  display: block;
+  width: 32px;
+  height: 22px;
+}
+  align-items: center;
+  /* allow nav to wrap below the title on narrow widths to avoid horizontal overflow */
+  flex-wrap: wrap;
   background-color: var(--color-white);
   border-bottom: 2px solid var(--color-primary);
   border-right: 2px solid var(--color-primary);
@@ -26,14 +72,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  flex-wrap: no-wrap;
+  justify-content: flex-start; /* keep title left-aligned */
+  /* allow title to wrap when translations are longer */
+  flex-wrap: wrap;
+  /* allow this flex item to shrink so nav can fit */
+  flex: 1 1 auto;
+  min-width: 0;
   gap: 20px;
 }
 .title {
   font-weight: var(--fw-bold);
   font-size: var(--fs-xl);
   margin: 0;
+  /* allow multi-line titles and break long words if needed */
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
 }
 
 .nav {
@@ -42,7 +96,9 @@
   justify-content: space-between;
   margin-right: var(--spacing-4);
   margin-left: auto;
-  min-width: 400px;
+  /* allow nav to shrink to avoid forcing header overflow */
+  min-width: 0;
+  flex: 0 1 auto;
 }
 
 .nav a {
@@ -53,11 +109,13 @@
   position: relative;
   text-decoration: none;
   cursor: pointer;
+  white-space: nowrap; /* keep each nav label on one line */
 }
 
 .desktopLink {
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .nav a::after {
@@ -80,13 +138,16 @@
   width: auto;
 }
 .header__iconContainer {
-  width: 100%;
+  /* let this container size to its content instead of forcing full width */
+  width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0.5rem;
   padding-left: 1rem;
+  flex: 0 1 auto;
+  gap: 12px;
 }
 
 @media (max-width: 1000px) {

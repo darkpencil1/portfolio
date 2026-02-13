@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Button from "../base/Button";
 import styles from "./Captcha.module.css";
+import { useLanguage } from "@/context/LanguageProvider";
+import { translations } from "@/resources/i18n";
 
 type CAPTCHAProps = {
   setIsCaptchaValid: (arg: boolean) => void;
@@ -8,6 +10,8 @@ type CAPTCHAProps = {
 const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
   const [captcha, setCaptcha] = useState("");
   const [captchaInput, setCaptchaInput] = useState("");
+  const { lang } = useLanguage();
+  const contact = translations[lang].contact;
 
   // Generate a random CAPTCHA string
   const generateCaptcha = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -35,7 +39,7 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
   return (
     <div className={styles.captcha}>
       <label>
-        {`Please prove that you're not a bot. Copy the generated content.`}
+        {contact.captcha.label}
       </label>
       <div className={styles.buttonContainer}>
         <Button
@@ -44,7 +48,7 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
           btnType="primary"
           size="sm"
         >
-          Generate CAPTCHA
+          {contact.captcha.generateButton}
         </Button>
         <div className={styles.generated} data-cy="generated-captcha">
           {captcha}
@@ -55,7 +59,7 @@ const Captcha = ({ setIsCaptchaValid }: CAPTCHAProps) => {
         type="text"
         id="captchaInput"
         value={captchaInput}
-        placeholder="Write here the generated text"
+        placeholder={contact.captcha.inputPlaceholder}
         onChange={(e) => setCaptchaInput(e.target.value)}
         onBlur={validateCaptcha}
         required

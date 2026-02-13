@@ -14,13 +14,18 @@ export type ProductPrice = {
   [key: string]: number;
 };
 
+interface LocalizedString {
+  en: string;
+  fi: string;
+}
+
 interface IProduct {
   id: number;
-  name: string;
+  name: LocalizedString;
   productType: ProductType;
-  primer: string; //First part of the description
-  description: string;
-  snapshot: string; //Description displayed in shop
+  primer: LocalizedString; //First part of the description
+  description: LocalizedString;
+  snapshot: LocalizedString; //Description displayed in shop
   imageUrl: StaticImageData;
   preview: StaticImageData; //Low res image used to display blurred version while main img loads
   images: StaticImageData[];

@@ -10,20 +10,24 @@
 .filterContainer {
   position: sticky;
   bottom: 30px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: row;
   align-self: center;
-  align-items: center; /* Aligns buttons to the left */
+  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.25rem 1rem;
   background-color: var(--color-white);
   border-radius: var(--br-full);
   border: 2px solid var(--color-primary);
-  height: 50px;
-  width: 300px;
-  gap: 20px;
+  /* allow the container to size to its content and wrap on small screens */
+  /* size to content by default; language-specific classes below set exact widths */
+  width: auto;
+ 
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: visible;
 }
 
 .filterBtn {
@@ -33,6 +37,31 @@
   cursor: pointer;
   font-weight: var(--fw-bold);
   color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0; /* allow shrinking */
+  flex: 0 0 auto; /* keep items their natural size */
+}
+
+.filterBtn > p { white-space: nowrap; }
+
+/* Allow text to wrap within each filter item if needed to prevent overflow */
+.filterBtn > p {
+  white-space: normal;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* Language-specific container widths (approximate) */
+.filterEn {
+  width: 300px;
+ 
+}
+
+.filterFi {
+  width: 400px;
+  
 }
 
 .imageGrid {
@@ -85,7 +114,7 @@
   content: ""; /* Add content to the pseudo-element */
   position: absolute; /* Position it relative to the <a> element */
   left: 0; /* Align it with the left edge of the <a> element */
-  bottom: 10px; /* Place it at the bottom */
+  bottom: 6px; /* Place it at the bottom */
   width: 0; /* Initially, the width is 0 */
   height: 3px; /* Set the height to create the border effect */
   background-color: var(--color-primary);

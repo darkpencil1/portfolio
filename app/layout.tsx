@@ -3,6 +3,7 @@ import { Red_Hat_Display, Paytone_One } from "next/font/google";
 import "@/resources/styles/globals.css";
 import Header from "@/components/shared/header/Header";
 import Footer from "@/components/shared/footer/Footer";
+import { LanguageProvider } from "@/context/LanguageProvider";
 
 // Define the fonts with custom CSS variable names
 const redHatDisplay = Red_Hat_Display({
@@ -30,11 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${paytoneOne.variable} ${redHatDisplay.variable} `}>
-        <Header />
-        {/*Spacer to prevent header from causing a slight initial scroll*/}
-        <div style={{ height: "20px" }}></div>
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          {/*Spacer to prevent header from causing a slight initial scroll*/}
+          <div style={{ height: "20px" }}></div>
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

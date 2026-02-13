@@ -1,14 +1,16 @@
 import styles from "./Story.module.css";
 
-const Story = () => {
+type StoryProps = {
+  title: string;
+  body: string;
+};
+
+const Story: React.FC<StoryProps> = ({ title, body }) => {
   return (
     <div className={styles.story}>
-      <h1>Hello there</h1>
+      <h1>{title}</h1>
       <p>
-        {`My name is Ville Lähetkangas. I'm a portrait and character artist based in Helsinki,
-        Finland. I originally did mainly digital art, but since then I've taken a
-        turn into traditional painting with oils and gouache. I also share my drawings here, they are something I enjoy doing a lot. Thanks for visiting the site, feel free to drop me a message from the 
-        contact section :)`}
+        {body}
         <br />
       </p>
     </div>
