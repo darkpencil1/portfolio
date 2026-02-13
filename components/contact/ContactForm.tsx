@@ -10,6 +10,8 @@ import styles from "./ContactForm.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import ContactFormPopup from "./ContactFormPopup";
 import Captcha from "./Captcha";
+import { useLanguage } from "@/context/LanguageProvider";
+import { translations } from "@/resources/i18n";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<ContactData>({
@@ -24,6 +26,8 @@ const ContactForm = () => {
     error: false,
     popupToggle: 0,
   } as ContactFormState);
+  const { lang } = useLanguage();
+  const contact = translations[lang].contact;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -63,7 +67,7 @@ const ContactForm = () => {
       >
         <p>
           <label htmlFor="name" className={styles.label}>
-            Name
+            {contact.labels.name}
           </label>
           <input
             className={styles.formElement}
@@ -77,7 +81,7 @@ const ContactForm = () => {
         </p>
         <p>
           <label htmlFor="email" className={styles.label}>
-            Email
+            {contact.labels.email}
           </label>
           <input
             className={styles.formElement}
@@ -91,11 +95,11 @@ const ContactForm = () => {
         </p>
         <p>
           <label htmlFor="message" className={styles.label}>
-            Message
+            {contact.labels.message}
           </label>
           <textarea
             className={`${styles.formElement} ${styles.textArea}`}
-            placeholder="Max 500 characters"
+            placeholder={contact.placeholders.message}
             name="message"
             id="message"
             value={formData.message}
@@ -110,14 +114,14 @@ const ContactForm = () => {
           btnType={!isCaptchaValid ? "disabled" : "primary"}
           disabled={!isCaptchaValid || isPending}
         >
-          {isPending ? <>Sending...</> : <>Submit</>}
+          {isPending ? <>{contact.submit.sending}</> : <>{contact.submit.idle}</>}
         </Button>
         {state.error && !state.success && !state.errorDetails && (
-          <p>An error occured, please try again soon.</p>
+          <p>{contact.errors.generic}</p>
         )}
         {state.errorDetails && (
           <>
-            <h3 style={{ marginBottom: 0 }}>Check the inputs:</h3>
+            <h3 style={{ marginBottom: 0 }}>{contact.errors.checkInputs}</h3>
             <ul style={{ marginTop: 0, padding: 0 }}>
               {state.errorDetails.map((e: ErrorDetail) => {
                 return (

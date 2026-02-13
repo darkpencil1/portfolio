@@ -7,10 +7,14 @@ import styles from "./ProductItem.module.css";
 import { Card } from "../base/Card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useLanguage } from "@/context/LanguageProvider";
+import { translations } from "@/resources/i18n";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
   const { id, imageUrl, name, snapshot, price, productType } = product;
   const router = useRouter();
+  const { lang } = useLanguage();
+  const shop = translations[lang].shop;
 
   const handleClick = () => {
     router.push(`/product/${id}`);
@@ -30,26 +34,30 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
         <Image
           className={styles.product__img}
           src={imageUrl}
-          alt={name}
+          alt={name[lang]}
           placeholder="blur"
         />
       </Col>
       <Row className={styles.product__textContainer}>
-        <h3 className={styles.product__type}>{productType}</h3>
-        <h2 className={styles.product__title}>{name}</h2>
-        <div className={styles.product__text}>{snapshot}</div>
+        <h3 className={styles.product__type}>
+          {shop.productItem && translations[lang].productTypes
+            ? translations[lang].productTypes[productType] ?? productType
+            : productType}
+        </h3>
+  <h2 className={styles.product__title}>{name[lang]}</h2>
+  <div className={styles.product__text}>{snapshot[lang]}</div>
         <Row className={styles.product__priceAndButton}>
-          <div className={styles.product__price}>
-            <span>from &nbsp;</span>
-            <h4>{Object.values(price[0])}€</h4>
-          </div>
+            <div className={styles.product__price}>
+              <span>{shop.productItem.from} &nbsp;</span>
+              <h4>{Object.values(price[0])}€</h4>
+            </div>
           <Button
             className={styles.product__cta}
             btnType="white"
             size="md"
             onClick={handleClick}
           >
-            Read more
+              {shop.productItem.readMore}
           </Button>
         </Row>
       </Row>

@@ -6,6 +6,8 @@ import styles from "./Gallery.module.css";
 import GalleryModal from "./GalleryModal";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageProvider";
+import { translations } from "@/resources/i18n";
 
 type ExtendedCategory = ArtCategory | "all";
 const topics: ExtendedCategory[] = ["all", "painting", "digital", "drawing"];
@@ -13,6 +15,7 @@ const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<string>("all");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { lang } = useLanguage();
 
   //Prevent site scrolling when modal is open
   useEffect(() => {
@@ -74,12 +77,19 @@ const Gallery: React.FC = () => {
       </motion.div>
 
       {/* Filter Section */}
-      <div className={styles.filterContainer}>
-        {topics.map((topic) => (
-          <li className={styles.filterBtn} key={topic}>
-            <p onClick={() => setFilter(topic)}>{topic}</p>
-          </li>
-        ))}
+      <div
+        className={`${styles.filterContainer} ${lang === "fi" ? styles.filterFi : styles.filterEn}`}
+      >
+        {topics.map((topic) => {
+          const topicKey = topic as keyof typeof translations["en"]["artwork"]["topics"];
+          return (
+            <li className={styles.filterBtn} key={topic}>
+              <p onClick={() => setFilter(topic)}>
+                {translations[lang].artwork.topics[topicKey]}
+              </p>
+            </li>
+          );
+        })}
       </div>
 
       {/* Modal */}

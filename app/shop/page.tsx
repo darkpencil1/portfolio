@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Row from "@/components/base/Row";
 import ProductItem from "@/components/shop/ProductItem";
@@ -7,8 +9,13 @@ import Skeleton from "@/components/shared/Skeleton";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./page.module.css";
 import products from "@/resources/products";
+import { useLanguage } from "@/context/LanguageProvider";
+import { translations } from "@/resources/i18n";
 
 const Shop: React.FC = () => {
+  const { lang } = useLanguage();
+  const shop = translations[lang].shop;
+
   return (
     <div className={styles.page}>
       <ShopBanner />
@@ -35,11 +42,8 @@ const Shop: React.FC = () => {
 
           {products.length === 0 && (
             <div className={styles.shop__noProducts}>
-              <h2>No available products...yet</h2>
-              <p>
-                {`I'll have prints and original paintings available
-                through this shop. Stay tuned.`}
-              </p>
+              <h2>{shop.noProducts.title}</h2>
+              <p>{shop.noProducts.desc}</p>
             </div>
           )}
         </AnimatePresence>
