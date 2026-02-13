@@ -14,7 +14,7 @@ describe("Header i18n", () => {
     cy.getDataCy("lang-toggle").click();
 
     // Header title and nav should update
-    cy.contains("Ville Lähetkankaan taide").should("be.visible");
+    cy.contains("Ville Lähetkangas").should("be.visible");
     cy.contains("Tietoa").should("be.visible");
 
     // Toggle back to English

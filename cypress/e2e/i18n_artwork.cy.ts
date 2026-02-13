@@ -16,10 +16,10 @@ describe("Artwork page i18n", () => {
     // Toggle language
     cy.getDataCy("lang-toggle").click();
 
-    // Finnish labels expected
+    // Finnish labels expected (updated translations)
     cy.contains("Kaikki").should("be.visible");
-    cy.contains("Maalaukset").should("be.visible");
-    cy.contains("Digitaaliset").should("be.visible");
-    cy.contains("Piirustukset").should("be.visible");
+    cy.contains("Maalaus").should("be.visible");
+    cy.contains("Digitaalinen").should("be.visible");
+    cy.contains("Piirustus").should("be.visible");
   });
 });

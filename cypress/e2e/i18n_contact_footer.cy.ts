@@ -21,12 +21,12 @@ describe("Contact & Footer i18n", () => {
     // Toggle to Finnish
     cy.getDataCy("lang-toggle").click();
 
-    // Contact page Finnish
-    cy.contains("Ota yhteyttä").should("be.visible");
-    cy.contains("Aina ilo kuulla").should("be.visible");
+  // Contact page Finnish
+  cy.contains("Ota yhteyttä").should("be.visible");
+  cy.contains("Jos on kysyttävää").should("be.visible");
 
     // Footer Finnish
-    cy.contains("Vastaan tilaustöitä!").should("be.visible");
+    cy.contains("Teen tilaustöitä!").should("be.visible");
     cy.contains("Sivut").should("be.visible");
     cy.contains("Instagram").should("be.visible");
   });

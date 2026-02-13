@@ -13,9 +13,10 @@ describe("Gallery Component", () => {
 
   it("filters images based on selected category", () => {
     const topics = ["all", "drawing", "painting", "digital"];
-
+    // Initial state should be English
+    cy.contains("Art of Ville Lähetkangas").should("be.visible");
     topics.forEach((topic) => {
-      cy.contains("li", topic).click();
+      cy.contains("li", topic, { matchCase: false }).click();
       if (topic === "all") {
         cy.getDataCy("gallery-grid")
           .children()

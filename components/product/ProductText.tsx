@@ -13,9 +13,24 @@ const ProductText = ({ product }: { product: IProduct }) => {
   const generatePriceString = (): string => {
     let result = `${prod.priceLabel} `;
     for (const obj of product.price) {
-      for (const [key, value] of Object.entries(obj)) {
+      const entries = Object.entries(obj);
+      if (entries.length === 1) {
+        const [key, value] = entries[0];
+        if (key === "price") {
+          // simple single price value
+          result += `<b>${value}€</b>, `;
+          continue;
+        }
         result += `${key} - <b>${value}€</b>, `;
+      } else {
+        for (const [key, value] of entries) {
+          result += `${key} - <b>${value}€</b>, `;
+        }
       }
+    }
+    // Remove trailing comma and space if present
+    if (result.endsWith(", ")) {
+      result = result.slice(0, -2);
     }
     return result;
   };

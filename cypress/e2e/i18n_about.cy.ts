@@ -21,6 +21,6 @@ describe("About page i18n", () => {
     // Finnish content expected
     cy.contains("Hei").should("be.visible");
     cy.contains("Nimeni on Ville Lähetkangas").should("be.visible");
-    cy.contains("Terveisin").should("be.visible");
+    cy.contains("Terve!").should("be.visible");
   });
 });
