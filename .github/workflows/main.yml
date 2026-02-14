@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20.11.1"
+          node-version: "20.19.0"
 
       # Cache Node.js dependencies
       - name: Cache Node.js modules
@@ -75,7 +75,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20.11.1"
+          node-version: "20.19.0"
 
       # Install dependencies
       - name: Install dependencies
