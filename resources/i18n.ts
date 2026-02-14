@@ -107,7 +107,7 @@ export const translations = {
     langButton: "EN",
     about: {
       title: "Hei",
-      body: `Nimeni on Ville Lähetkangas. Olen muotokuva- ja hahmotaiteilija, joka asuu Helsingissä. Maalaan nykyään pääasiassa öljyväreillä ja jonkun verran guassilla. Sivuilla näet myös piirustuksiani ja digitaalista taidetta, mitä tein ennen. Teen tilaustöitä, joten jos olet harkinnut muotokuvaa niin ota rohkeasti yhteyttä yhteydenottolomakkeen kautta :)`,
+      body: `Nimeni on Ville Lähetkangas. Olen muotokuva- ja hahmotaiteilija, joka asuu Helsingissä. Maalaan nykyään pääasiassa öljyväreillä ja jonkun verran guassilla. Sivuilla näet myös piirustuksiani ja digitaalista taidetta, mitä tein etenkin ennen. Teen tilaustöitä, joten jos olet harkinnut muotokuvaa niin ota rohkeasti yhteyttä yhteydenottolomakkeen kautta.`,
       imageAlt: "Tässä pitäisi olla kasvoni. Miksi se ei ole täällä?",
       imageDesc: "Terve!",
     },

@@ -26,6 +26,7 @@ import erik_figure_2 from "@/public/images/erik-gist-fig-2-web.jpg";
 import erik_head from "@/public/images/erik-gist-1-web.jpg";
 import wedding from "@/public/images/wedding.jpg";
 import witcher from "@/public/images/witcher-character.jpg";
+import adam from "@/public/images/adam.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -66,6 +67,11 @@ const artwork: Artwork[] = [
   {
     id: "27",
     img: wedding,
+    category: "painting",
+  },
+  {
+    id: "30",
+    img: adam,
     category: "painting",
   },
   {
