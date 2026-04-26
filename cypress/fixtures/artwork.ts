@@ -64,6 +64,10 @@ const artwork: CypressArtwork[] = [
     category: "painting",
   },
   {
+    id: "snowscape",
+    category: "painting",
+  },
+  {
     id: "visionbakers_bay",
     category: "digital",
   },
@@ -112,7 +116,7 @@ const artwork: CypressArtwork[] = [
     category: "drawing",
   },
   {
-    id: "15",
+    id: "erik_figure_2",
     category: "drawing",
   },
 ];

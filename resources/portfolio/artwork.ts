@@ -27,6 +27,7 @@ import tyrion from "@/public/images/tyrion.jpg";
 import bhutan_lady from "@/public/images/bhutan-lady.jpg";
 import oulu from "@/public/images/oulu.jpg";
 import red_skyrim from "@/public/images/red_skyrim.jpg";
+import snowscape from "@/public/images/snowscape.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -102,6 +103,11 @@ const artwork: Artwork[] = [
   {
     id: "recliner",
     img: recliner,
+    category: "painting",
+  },
+  {
+    id: "snowscape",
+    img: snowscape,
     category: "painting",
   },
   {
