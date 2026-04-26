@@ -7,15 +7,11 @@ import taidonjahti from "@/public/images/taidonjahti.jpg";
 import laezel from "public/images/laezel.jpg";
 import shadowheart from "public/images/shadowheart.jpg";
 import school from "@/public/images/school.jpg";
-import gouache_4 from "@/public/images/guassi-4.jpg";
-import gouache_6 from "@/public/images/guassi-6.jpg";
 import lida from "@/public/images/lida.jpg";
-import tom from "@/public/images/tom.jpg";
-import sacha from "@/public/images/sacha.jpg";
 import olia from "@/public/images/olia.jpg";
 import milo from "@/public/images/milo.jpg";
-import huhtikuu from "@/public/images/huhtikuu.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
+import huhtikuu from "@/public/images/huhtikuu.jpg";
 import mummi from "@/public/images/mummi.jpg";
 import recliner from "@/public/images/recliner.jpg";
 import tytto from "@/public/images/tytto-web.jpg";
@@ -27,6 +23,10 @@ import erik_head from "@/public/images/erik-gist-1-web.jpg";
 import wedding from "@/public/images/wedding.jpg";
 import witcher from "@/public/images/witcher-character.jpg";
 import adam from "@/public/images/adam.jpg";
+import tyrion from "@/public/images/tyrion.jpg";
+import bhutan_lady from "@/public/images/bhutan-lady.jpg";
+import oulu from "@/public/images/oulu.jpg";
+import red_skyrim from "@/public/images/red_skyrim.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -50,7 +50,7 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
-    id: "20",
+    id: "1",
     img: partanaama,
     category: "painting",
   },
@@ -75,33 +75,23 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "34",
+    img: oulu,
+    category: "painting",
+  },
+  {
     id: "29",
     img: witcher,
     category: "painting",
   },
   {
+    id: "35",
+    img: red_skyrim,
+    category: "painting",
+  },
+  {
     id: "19",
     img: olia,
-    category: "painting",
-  },
-  {
-    id: "1",
-    img: gouache_4,
-    category: "painting",
-  },
-  {
-    id: "13",
-    img: tom,
-    category: "painting",
-  },
-  {
-    id: "16",
-    img: sacha,
-    category: "painting",
-  },
-  {
-    id: "11",
-    img: gouache_6,
     category: "painting",
   },
   {
@@ -155,8 +145,18 @@ const artwork: Artwork[] = [
     category: "drawing",
   },
   {
+    id: "33",
+    img: tyrion,
+    category: "drawing",
+  },
+  {
     id: "28",
     img: erik_head,
+    category: "drawing",
+  },
+  {
+    id: "32",
+    img: bhutan_lady,
     category: "drawing",
   },
   {
