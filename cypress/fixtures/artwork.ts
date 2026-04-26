@@ -4,111 +4,111 @@ type CypressArtwork = Omit<Artwork, "img">;
 
 const artwork: CypressArtwork[] = [
   {
-    id: "18",
+    id: "huhtikuu",
     category: "painting",
   },
   {
-    id: "12",
+    id: "lida",
     category: "painting",
   },
   {
-    id: "17",
+    id: "milo",
     category: "painting",
   },
   {
-    id: "22",
+    id: "tytto",
     category: "painting",
   },
   {
-    id: "1",
+    id: "partanaama",
     category: "painting",
   },
   {
-    id: "24",
+    id: "mummi",
     category: "painting",
   },
   {
-    id: "25",
+    id: "kissat",
     category: "painting",
   },
   {
-    id: "27",
+    id: "wedding",
     category: "painting",
   },
   {
-    id: "30",
+    id: "adam",
     category: "painting",
   },
   {
-    id: "34",
+    id: "oulu",
     category: "painting",
   },
   {
-    id: "29",
+    id: "witcher",
     category: "painting",
   },
   {
-    id: "35",
+    id: "red_skyrim",
     category: "painting",
   },
   {
-    id: "19",
+    id: "olia",
     category: "painting",
   },
   {
-    id: "26",
+    id: "female_1",
     category: "painting",
   },
   {
-    id: "23",
+    id: "recliner",
     category: "painting",
   },
   {
-    id: "4",
+    id: "visionbakers_bay",
     category: "digital",
   },
   {
-    id: "5",
+    id: "oracle",
     category: "digital",
   },
   {
-    id: "6",
+    id: "bringo",
     category: "digital",
   },
   {
-    id: "7",
+    id: "explorer",
     category: "digital",
   },
   {
-    id: "8",
+    id: "taidonjahti",
     category: "digital",
   },
   {
-    id: "9",
+    id: "school",
     category: "digital",
   },
   {
-    id: "10",
+    id: "laezel",
     category: "drawing",
   },
   {
-    id: "21",
+    id: "shadowheart",
     category: "drawing",
   },
   {
-    id: "33",
+    id: "tyrion",
     category: "drawing",
   },
   {
-    id: "28",
+    id: "erik_head",
     category: "drawing",
   },
   {
-    id: "32",
+    id: "bhutan_lady",
     category: "drawing",
   },
   {
-    id: "14",
+    id: "erik_figure_1",
     category: "drawing",
   },
   {
