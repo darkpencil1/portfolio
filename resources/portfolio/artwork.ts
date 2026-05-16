@@ -28,6 +28,7 @@ import bhutan_lady from "@/public/images/bhutan-lady.jpg";
 import oulu from "@/public/images/oulu.jpg";
 import red_skyrim from "@/public/images/red_skyrim.jpg";
 import snowscape from "@/public/images/snowscape.jpg";
+import koli from "@/public/images/koli.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -103,6 +104,11 @@ const artwork: Artwork[] = [
   {
     id: "recliner",
     img: recliner,
+    category: "painting",
+  },
+  {
+    id: "koli",
+    img: koli,
     category: "painting",
   },
   {
