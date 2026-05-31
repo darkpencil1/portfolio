@@ -29,6 +29,8 @@ import oulu from "@/public/images/oulu.jpg";
 import red_skyrim from "@/public/images/red_skyrim.jpg";
 import snowscape from "@/public/images/snowscape.jpg";
 import koli from "@/public/images/koli.jpg";
+import kolipuro from "@/public/images/kolipuro.jpg";
+import geralt from "@/public/images/geralt.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -112,6 +114,11 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
+    id: "kolipuro",
+    img: kolipuro,
+    category: "painting",
+  },
+  {
     id: "snowscape",
     img: snowscape,
     category: "painting",
@@ -159,6 +166,11 @@ const artwork: Artwork[] = [
   {
     id: "tyrion",
     img: tyrion,
+    category: "drawing",
+  },
+  {
+    id: "geralt",
+    img: geralt,
     category: "drawing",
   },
   {
