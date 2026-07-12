@@ -18,10 +18,8 @@ const products: IProduct[] = [
       fi: "Öljymaalaus valitsemastasi kohteesta.",
     },
     description: {
-      en:
-        "A portrait painting where subject can be anything from you, your family member or your dog or a favourite character. It's up to you! I'll work from photos, so pick at least one you'd like me to base the painting on. Send me a message of what you have in mind or if you have any questions and let's get started.",
-      fi:
-        "Muotokuvamaalaus, jonka kohteen voit valita itse. Se voi olla esimerkiksi sinä, perheenjäsen, lemmikki tai suosikkihahmo. Työskentelen valokuvien pohjalta, joten valitse ainakin yksi kuva, jota haluat käyttää. Lähetä viestiä jos sinulla on idea tai kysy rohkeasti lisätietoja.",
+      en: "A portrait painting where subject can be anything from you, your family member or your dog or a favourite character. It's up to you! I'll work from photos, so pick at least one you'd like me to base the painting on. Send me a message of what you have in mind or if you have any questions and let's get started.",
+      fi: "Muotokuvamaalaus, jonka kohteen voit valita itse. Se voi olla esimerkiksi sinä, perheenjäsen, lemmikki tai suosikkihahmo. Työskentelen valokuvien pohjalta, joten valitse ainakin yksi kuva, jota haluat käyttää. Lähetä viestiä jos sinulla on idea tai kysy rohkeasti lisätietoja.",
     },
     snapshot: {
       en: "Get a portrait painting of yourself or your loved ones.",
@@ -30,7 +28,7 @@ const products: IProduct[] = [
     imageUrl: lida,
     preview: lida,
     images: [lida, kissat, gouache_wall],
-  price: [{ price: 300 }],
+    price: [{ price: 400 }],
     orientation: Orientation.PORTRAIT,
   },
   {
@@ -45,10 +43,8 @@ const products: IProduct[] = [
       fi: "Muotokuva valitsemastasi kohteesta.",
     },
     description: {
-      en:
-        "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like me to use as a reference. Send me a message of what you have in mind and let's get started!",
-      fi:
-        "Teen mielelläni piirustuksen sinusta, läheisestäsi, lemmikistäsi tai hahmosta. Todellisista henkilöistä työskentelen valokuvan pohjalta — valitse yksi tai useampi referenssikuva. Lähetä viesti ideastasi ja aloitetaan!",
+      en: "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like me to use as a reference. Send me a message of what you have in mind and let's get started!",
+      fi: "Teen mielelläni piirustuksen sinusta, läheisestäsi, lemmikistäsi tai hahmosta. Todellisista henkilöistä työskentelen valokuvan pohjalta — valitse yksi tai useampi referenssikuva. Lähetä viesti ideastasi ja aloitetaan!",
     },
     snapshot: {
       en: "Get a drawing of yourself or your loved ones.",
@@ -57,7 +53,7 @@ const products: IProduct[] = [
     imageUrl: shadowheart,
     preview: shadowheart,
     images: [shadowheart, boy_wall],
-  price: [{ price: 200 }],
+    price: [{ price: 300 }],
     orientation: Orientation.PORTRAIT,
   },
 ];

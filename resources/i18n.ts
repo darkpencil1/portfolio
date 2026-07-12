@@ -26,7 +26,8 @@ export const translations = {
         message: "Max 500 characters",
       },
       captcha: {
-        label: "Please prove that you're not a bot. Copy the generated content.",
+        label:
+          "Please prove that you're not a bot. Copy the generated content.",
         generateButton: "Generate CAPTCHA",
         inputPlaceholder: "Write here the generated text",
       },
@@ -113,7 +114,8 @@ export const translations = {
     },
     contact: {
       pageTitle: "Ota yhteyttä",
-      pageSubtitle: "Jos on kysyttävää tai ajatuksia niin laita tästä viestiä. Kuulen mielelläni sinusta.",
+      pageSubtitle:
+        "Jos on kysyttävää tai ajatuksia niin laita tästä viestiä. Kuulen mielelläni sinusta.",
       labels: {
         name: "Nimi",
         email: "Sähköposti",
@@ -123,7 +125,8 @@ export const translations = {
         message: "Max 500 merkkiä",
       },
       captcha: {
-        label: "Todistathan ystävällisesti, ettet ole botti. Kopioi generoitu sisältö.",
+        label:
+          "Todistathan ystävällisesti, ettet ole botti. Kopioi generoitu sisältö.",
         generateButton: "Generoi CAPTCHA",
         inputPlaceholder: "Kirjoita generoitu teksti tähän",
       },
@@ -159,7 +162,7 @@ export const translations = {
     shop: {
       banner: {
         title: "Kauppa",
-        desc: "Etsitkö uniikkia, käsin maalattua teosta? Minulta voin tilata tilaustyön.",
+        desc: "Etsitkö uniikkia, käsin maalattua teosta? Minulta voit tilata tilaustyön.",
       },
       noProducts: {
         title: "Ei saatavilla olevia tuotteita...vielä",

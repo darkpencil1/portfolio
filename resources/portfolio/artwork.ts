@@ -14,7 +14,6 @@ import partanaama from "@/public/images/partanaama.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
 import mummi from "@/public/images/mummi.jpg";
 import recliner from "@/public/images/recliner.jpg";
-import tytto from "@/public/images/tytto-web.jpg";
 import kissat from "@/public/images/kissat.jpg";
 import female_1 from "@/public/images/female-1.jpg";
 import erik_figure_1 from "@/public/images/erik-gist-fig-1-web.jpg";
@@ -31,6 +30,7 @@ import snowscape from "@/public/images/snowscape.jpg";
 import koli from "@/public/images/koli.jpg";
 import kolipuro from "@/public/images/kolipuro.jpg";
 import geralt from "@/public/images/geralt.jpg";
+import jouni from "@/public/images/jouni.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -49,8 +49,8 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
-    id: "tytto",
-    img: tytto,
+    id: "jouni",
+    img: jouni,
     category: "painting",
   },
   {
