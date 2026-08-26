@@ -4,6 +4,9 @@ import kissat from "@/public/images/kissat.jpg";
 import gouache_wall from "@/public/images/assets/gouache-wall-2.png";
 import boy_wall from "@/public/images/assets/boy-wall.png";
 import shadowheart from "@/public/images/shadowheart.jpg";
+import ukkokoli from "@/public/images/ukko-koli.jpg";
+import ukko_koli_side from "@/public/images/ukko-koli-sivu.jpeg";
+import ukkokoli_hanged from "@/public/images/ukko-koli-ripustettu.jpeg";
 
 const products: IProduct[] = [
   {
@@ -28,7 +31,15 @@ const products: IProduct[] = [
     imageUrl: lida,
     preview: lida,
     images: [lida, kissat, gouache_wall],
-    price: [{ price: 400 }],
+    price: [{ price: 500 }],
+    delivery: {
+      en: "Pickup from Helsinki or postal within Finland",
+      fi: "Nouto Helsingistä tai postitus Suomen sisällä",
+    },
+    estimatedTime: {
+      en: "2 weeks",
+      fi: "2 viikkoa",
+    },
     orientation: Orientation.PORTRAIT,
   },
   {
@@ -54,6 +65,55 @@ const products: IProduct[] = [
     preview: shadowheart,
     images: [shadowheart, boy_wall],
     price: [{ price: 300 }],
+    delivery: {
+      en: "Ships after payment",
+      fi: "Toimitetaan maksun jälkeen",
+    },
+    estimatedTime: {
+      en: "1 week",
+      fi: "1 viikko",
+    },
+    orientation: Orientation.PORTRAIT,
+  },
+  {
+    id: 3,
+    name: {
+      en: "A view from Ukko-Koli to south",
+      fi: "Ukko-Kolilta etelään",
+    },
+    productType: ProductType.PAINTING,
+    primer: {
+      en: "An iconic view from on top of Koli",
+      fi: "Ikoninen näkymä Kolin huipulta",
+    },
+    description: {
+      en: "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like me to use as a reference. Send me a message of what you have in mind and let's get started!",
+      fi: "Maalaus esittää näkymän Ukko-Kolin huipulta etelään Mäkränvaaralle päin.",
+    },
+    snapshot: {
+      en: "Buy an iconic view from on top of Koli.",
+      fi: "Osta ikoninen näkymä Kolin huipulta.",
+    },
+    imageUrl: ukkokoli,
+    preview: ukkokoli,
+    images: [ukkokoli, ukkokoli_hanged, ukko_koli_side],
+    price: [{ price: 400 }],
+    size: {
+      en: "40x50 cm",
+      fi: "40x50 cm",
+    },
+    delivery: {
+      en: "Pickup from Helsinki or postal within Finland",
+      fi: "Nouto Helsingistä tai postitus Suomen sisällä",
+    },
+    canvas: {
+      en: "Strecthed cotton, the frame had 2cm of depth",
+      fi: "Puuvillakangas, pohjassa on noin 2cm syvyyttä",
+    },
+    material: {
+      en: "Oil on canvas",
+      fi: "Öljy kankaalle",
+    },
     orientation: Orientation.PORTRAIT,
   },
 ];

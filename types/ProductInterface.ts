@@ -7,7 +7,7 @@ export enum Orientation {
 
 export enum ProductType {
   COMMISSION = "Commission",
-  POSTER = "Poster",
+  PAINTING = "Painting",
 }
 
 export type ProductPrice = {
@@ -19,10 +19,9 @@ interface LocalizedString {
   fi: string;
 }
 
-interface IProduct {
+interface BaseProduct {
   id: number;
   name: LocalizedString;
-  productType: ProductType;
   primer: LocalizedString; //First part of the description
   description: LocalizedString;
   snapshot: LocalizedString; //Description displayed in shop
@@ -32,4 +31,20 @@ interface IProduct {
   price: ProductPrice[];
   orientation: Orientation;
 }
+
+export interface CommissionProduct extends BaseProduct {
+  productType: ProductType.COMMISSION;
+  delivery?: LocalizedString;
+  estimatedTime?: LocalizedString;
+}
+
+export interface PaintingProduct extends BaseProduct {
+  productType: ProductType.PAINTING;
+  size?: LocalizedString;
+  delivery?: LocalizedString;
+  canvas?: LocalizedString;
+  material?: LocalizedString;
+}
+
+export type IProduct = CommissionProduct | PaintingProduct;
 export default IProduct;

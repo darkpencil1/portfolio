@@ -47,6 +47,7 @@ export const translations = {
     footer: {
       commissionTitle: "Accepting commissions!",
       commissionBody: "Send me a message via contact form.",
+      commissionHasContactLink: true,
       pagesHeading: "Pages",
       socialHeading: "Social",
       links: {
@@ -63,7 +64,7 @@ export const translations = {
     shop: {
       banner: {
         title: "Shop",
-        desc: "Looking for a unique, hand-painted artwork? I'm open for commissions.",
+        desc: "The available artwork for purchase are listed here. You can also order a commission through here.",
       },
       noProducts: {
         title: "No available products...yet",
@@ -75,8 +76,15 @@ export const translations = {
       },
     },
     product: {
+      availablePainting: "Available painting",
+      purchasePainting:
+        "Please contact me via contact form that you wish to purchase the painting.",
       selectPrompt: "Please select a product from shop to view details.",
       priceHeadExtra: "+100€ for each additional head",
+      sizeLabel: "Size:",
+      canvasLabel: "Canvas:",
+      materialLabel: "Material:",
+      deliveryLabel: "Delivery:",
       priceLabel: "Price:",
       estimatedTime: "Estimated time:",
       estimatedDuration: "1 week",
@@ -146,6 +154,7 @@ export const translations = {
     footer: {
       commissionTitle: "Teen tilaustöitä!",
       commissionBody: "Lähetä minulle viesti yhteydenottolomakkeen kautta.",
+      commissionHasContactLink: true,
       pagesHeading: "Sivut",
       socialHeading: "Some",
       links: {
@@ -162,7 +171,7 @@ export const translations = {
     shop: {
       banner: {
         title: "Kauppa",
-        desc: "Etsitkö uniikkia, käsin maalattua teosta? Minulta voit tilata tilaustyön.",
+        desc: "Täällä on nähtävillä saatavilla olevat maalaukseni. Voit myös tilata minulta tilaustyön tätä kautta.",
       },
       noProducts: {
         title: "Ei saatavilla olevia tuotteita...vielä",
@@ -174,8 +183,15 @@ export const translations = {
       },
     },
     product: {
+      availablePainting: "Saatavilla oleva maalaus",
+      purchasePainting:
+        "Ota minuun yhteyttä yhteydenottolomakkeen kautta jos haluat ostaa maalauksen.",
       selectPrompt: "Valitse tuote kaupasta nähdäksesi lisätiedot.",
       priceHeadExtra: "+100€ jokaisesta lisäpäästä",
+      sizeLabel: "Koko:",
+      canvasLabel: "Pohja:",
+      materialLabel: "Materiaali:",
+      deliveryLabel: "Toimitus:",
       priceLabel: "Hinta:",
       estimatedTime: "Arvioitu aika:",
       estimatedDuration: "1 viikko",

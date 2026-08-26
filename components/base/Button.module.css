@@ -13,6 +13,11 @@
   text-transform: capitalize;
 }
 
+/* Use this modifier to keep original capitalization from the text (sentence style) */
+.button--sentence {
+  text-transform: none;
+}
+
 .button:active {
   background-color: var(--color-primary);
   color: var(--color-white);

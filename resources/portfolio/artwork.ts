@@ -3,21 +3,16 @@ import bringo from "@/public/images/bringo.jpg";
 import visionbakers_bay from "@/public/images/visionbakers-bay.jpg";
 import oracle from "@/public/images/oracle.jpg";
 import explorer from "@/public/images/explorer.jpg";
-import taidonjahti from "@/public/images/taidonjahti.jpg";
 import laezel from "public/images/laezel.jpg";
 import shadowheart from "public/images/shadowheart.jpg";
-import school from "@/public/images/school.jpg";
 import lida from "@/public/images/lida.jpg";
 import olia from "@/public/images/olia.jpg";
 import milo from "@/public/images/milo.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
 import mummi from "@/public/images/mummi.jpg";
-import recliner from "@/public/images/recliner.jpg";
 import kissat from "@/public/images/kissat.jpg";
 import female_1 from "@/public/images/female-1.jpg";
-import erik_figure_1 from "@/public/images/erik-gist-fig-1-web.jpg";
-import erik_figure_2 from "@/public/images/erik-gist-fig-2-web.jpg";
 import erik_head from "@/public/images/erik-gist-1-web.jpg";
 import wedding from "@/public/images/wedding.jpg";
 import witcher from "@/public/images/witcher-character.jpg";
@@ -31,6 +26,7 @@ import koli from "@/public/images/koli.jpg";
 import kolipuro from "@/public/images/kolipuro.jpg";
 import geralt from "@/public/images/geralt.jpg";
 import jouni from "@/public/images/jouni.jpg";
+import ukkokoli from "@/public/images/ukko-koli.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -104,8 +100,8 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
-    id: "recliner",
-    img: recliner,
+    id: "ukkokoli",
+    img: ukkokoli,
     category: "painting",
   },
   {
@@ -144,16 +140,6 @@ const artwork: Artwork[] = [
     category: "digital",
   },
   {
-    id: "taidonjahti",
-    img: taidonjahti,
-    category: "digital",
-  },
-  {
-    id: "school",
-    img: school,
-    category: "digital",
-  },
-  {
     id: "laezel",
     img: laezel,
     category: "drawing",
@@ -181,16 +167,6 @@ const artwork: Artwork[] = [
   {
     id: "bhutan_lady",
     img: bhutan_lady,
-    category: "drawing",
-  },
-  {
-    id: "erik_figure_1",
-    img: erik_figure_1,
-    category: "drawing",
-  },
-  {
-    id: "erik_figure_2",
-    img: erik_figure_2,
     category: "drawing",
   },
 ];

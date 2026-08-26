@@ -1,9 +1,9 @@
 .productItem {
-  flex: 1;
+  flex: 0 1 calc(50% - 50px);
   min-height: 320px;
-  min-width: 750px;
-  width: 750px;
-  max-width: 1000px;
+  min-width: 300px;
+  width: calc(50% - 50px);
+  max-width: 750px;
   border-bottom: 2px solid var(--color-gray);
   border-right: 2px solid var(--color-gray);
   box-shadow: 0 0 10px var(--color-gray);
@@ -71,6 +71,8 @@
 .product__priceAndButton {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .product__price {
@@ -140,4 +142,8 @@
   .product__price {
     font-size: var(--fs-md);
   }
+}
+.product__lastOdd {
+  margin-right: auto !important;
+  align-self: flex-start !important;
 }

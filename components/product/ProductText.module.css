@@ -9,7 +9,7 @@
 }
 
 .product__text {
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 0px;
   margin-top: 0;
 }
@@ -27,18 +27,33 @@
 }
 
 .product__price {
-  margin-bottom: 40px;
-}
+  margin-top: 0;
+  margin-bottom: 1.2rem;
 
 .product__priceTitle {
   text-decoration: underline;
   margin-bottom: 10px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1.2rem;
+.product__contactWrap {
+  margin-top: 0.25rem;
 }
-
-.product__info_price {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
+}
+
+.product__info {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.product__purchasePrompt {
+  margin-top: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .product__info_priceHead {

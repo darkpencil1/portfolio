@@ -8,6 +8,12 @@
   justify-content: center;
 }
 
+/* If the row contains only one product, align it to the left */
+.product__wrapper > *:only-child {
+  margin: 0;
+  align-self: flex-start;
+}
+
 .shop__noProducts {
   margin: auto;
   margin-top: 2rem;

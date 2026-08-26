@@ -13,7 +13,6 @@ describe("Shop & Product i18n", () => {
     cy.getDataCy("lang-toggle").click();
 
     // Product item should update
-    cy.contains("alkaen").should("be.visible");
     cy.contains("Lue lisää").should("be.visible");
 
     // Click first product's read more

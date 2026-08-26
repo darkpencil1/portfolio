@@ -15,12 +15,16 @@ import { translations } from "@/resources/i18n";
 const Shop: React.FC = () => {
   const { lang } = useLanguage();
   const shop = translations[lang].shop;
+  const wrapperClass =
+    products && products.length === 1
+      ? `${styles.product__wrapper} ${styles.product__single}`
+      : styles.product__wrapper;
 
   return (
     <div className={styles.page}>
       <ShopBanner />
       {/* Product rows */}
-      <Row className={styles.product__wrapper}>
+      <Row className={wrapperClass}>
         <AnimatePresence>
           {!products &&
             Array.from({ length: 3 }).map((_, index) => (
@@ -36,9 +40,16 @@ const Shop: React.FC = () => {
               </motion.div>
             ))}
           {products.length > 0 &&
-            products?.map((product: IProduct, index: number) => (
-              <ProductItem key={index} product={product} />
-            ))}
+            products?.map((product: IProduct, index: number) => {
+              const isLastOdd = products.length % 2 === 1 && index === products.length - 1;
+              return (
+                <ProductItem
+                  key={index}
+                  product={product}
+                  className={isLastOdd ? styles.product__lastOdd : undefined}
+                />
+              );
+            })}
 
           {products.length === 0 && (
             <div className={styles.shop__noProducts}>

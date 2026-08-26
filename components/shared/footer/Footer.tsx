@@ -33,9 +33,40 @@ const Footer = () => {
         <div className={styles.footer__commision}>
           <h2>{footer.commissionTitle}</h2>
           <p>
-            {footer.commissionBody.includes("contact") ? (
-              // Keep the Link for navigation but insert localized label
-              <>Send me a message via <Link href={'/contact'}>{footer.links.contact}</Link>.</>
+            {footer.commissionHasContactLink ? (
+              (() => {
+                const body: string = footer.commissionBody;
+                if (lang === "fi" && body.includes("yhteydenottolomakkeen")) {
+                  const parts = body.split("yhteydenottolomakkeen");
+                  return (
+                    <>
+                      {parts[0]}
+                      <Link href={'/contact'}>yhteydenottolomakkeen</Link>
+                      {parts[1]}
+                    </>
+                  );
+                }
+                // if the body contains the word 'contact' use localized link label
+                if (body.includes("contact")) {
+                  const idx = body.indexOf("contact");
+                  const before = body.slice(0, idx);
+                  const after = body.slice(idx + "contact".length);
+                  return (
+                    <>
+                      {before}
+                      <Link href={'/contact'}>{footer.links.contact}</Link>
+                      {after}
+                    </>
+                  );
+                }
+                // fallback: render body then localized link
+                return (
+                  <>
+                    {body} {" "}
+                    <Link href={'/contact'}>{footer.links.contact}</Link>
+                  </>
+                );
+              })()
             ) : (
               footer.commissionBody
             )}
