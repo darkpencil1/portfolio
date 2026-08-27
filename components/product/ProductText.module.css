@@ -3,6 +3,26 @@
   max-height: 600px;
 }
 
+@media (max-width: 800px) {
+  .product__textContainer {
+    width: var(--col-10);
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 550px) {
+  .product__contactWrap {
+    width: 100%;
+  }
+
+  .product__contactWrap > button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+}
+
 .product__textContainer > h2 {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -36,6 +56,7 @@
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 1.2rem;
+
 .product__contactWrap {
   margin-top: 0.25rem;
 }
@@ -65,9 +86,3 @@
   margin: 0;
 }
 
-@media (max-width: 800px) {
-  .product__textContainer {
-    width: var(--col-11);
-    max-height: 600px;
-  }
-}

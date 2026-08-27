@@ -101,7 +101,6 @@
 @media (max-width: 850px) {
   .productItem {
     flex-direction: column;
-    max-width: 95%;
     align-items: center;
     justify-content: center;
   }
@@ -116,6 +115,13 @@
   }
   .product__img {
     padding: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .productItem {
+    width: 90%;
+    max-width: 90%;
   }
 }
 

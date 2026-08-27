@@ -54,7 +54,7 @@ const useMobile = (): boolean => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobileScreen(window.innerWidth <= 1000);
+      setIsMobileScreen(window.innerWidth <= 1060);
     };
 
     // Set initial state
