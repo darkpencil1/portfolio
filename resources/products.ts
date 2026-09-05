@@ -1,7 +1,7 @@
 import IProduct, { Orientation, ProductType } from "../types/ProductInterface";
 import lida from "@/public/images/lida.jpg";
 import kissat from "@/public/images/kissat.jpg";
-import gouache_wall from "@/public/images/assets/gouache-wall-2.png";
+import jouni from "@/public/images/jouni.jpg";
 import boy_wall from "@/public/images/assets/boy-wall.png";
 import shadowheart from "@/public/images/shadowheart.jpg";
 import ukkokoli from "@/public/images/ukko-koli.jpg";
@@ -30,8 +30,8 @@ const products: IProduct[] = [
     },
     imageUrl: lida,
     preview: lida,
-    images: [lida, kissat, gouache_wall],
-    price: [{ price: 500 }],
+    images: [lida, kissat, jouni],
+    price: [{ price: 400 }],
     delivery: {
       en: "Pickup from Helsinki or postal within Finland",
       fi: "Nouto Helsingistä tai postitus Suomen sisällä",
@@ -97,7 +97,7 @@ const products: IProduct[] = [
     imageUrl: ukkokoli,
     preview: ukkokoli,
     images: [ukkokoli, ukkokoli_hanged, ukko_koli_side],
-    price: [{ price: 400 }],
+    price: [{ price: 300 }],
     size: {
       en: "40x50 cm",
       fi: "40x50 cm",

@@ -27,6 +27,7 @@ import kolipuro from "@/public/images/kolipuro.jpg";
 import geralt from "@/public/images/geralt.jpg";
 import jouni from "@/public/images/jouni.jpg";
 import ukkokoli from "@/public/images/ukko-koli.jpg";
+import i_ja_r from "@/public/images/i-ja-r.jpeg";
 
 const artwork: Artwork[] = [
   {
@@ -62,6 +63,11 @@ const artwork: Artwork[] = [
   {
     id: "kissat",
     img: kissat,
+    category: "painting",
+  },
+  {
+    id: "ijar",
+    img: i_ja_r,
     category: "painting",
   },
   {
