@@ -79,7 +79,7 @@ const products: IProduct[] = [
     id: 3,
     name: {
       en: "A view from Ukko-Koli to south",
-      fi: "Ukko-Kolilta etelään",
+      fi: "Etelään Ukko-Kolilta",
     },
     productType: ProductType.PAINTING,
     primer: {
