@@ -87,7 +87,7 @@ const products: IProduct[] = [
       fi: "Ikoninen näkymä Kolin huipulta",
     },
     description: {
-      en: "I'm happy to do a portrait drawing of you, your significant other, pet or character. With real people I'll work from a photo, so please select one or more you'd like me to use as a reference. Send me a message of what you have in mind and let's get started!",
+      en: "The painting depicts a view seen from top of Ukko-Koli southwards. Ukko-Koli is the highest point of Koli National Park.",
       fi: "Maalaus esittää näkymän Ukko-Kolin huipulta etelään Mäkränvaaralle päin.",
     },
     snapshot: {
@@ -107,7 +107,7 @@ const products: IProduct[] = [
       fi: "Nouto Helsingistä tai postitus Suomen sisällä",
     },
     canvas: {
-      en: "Strecthed cotton, the frame had 2cm of depth",
+      en: "Stretched cotton, the frame had 2cm of depth",
       fi: "Puuvillakangas, pohjassa on noin 2cm syvyyttä",
     },
     material: {
