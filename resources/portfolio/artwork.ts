@@ -6,7 +6,6 @@ import explorer from "@/public/images/explorer.jpg";
 import laezel from "public/images/laezel.jpg";
 import shadowheart from "public/images/shadowheart.jpg";
 import lida from "@/public/images/lida.jpg";
-import olia from "@/public/images/olia.jpg";
 import milo from "@/public/images/milo.jpg";
 import partanaama from "@/public/images/partanaama.jpg";
 import huhtikuu from "@/public/images/huhtikuu.jpg";
@@ -28,6 +27,8 @@ import geralt from "@/public/images/geralt.jpg";
 import jouni from "@/public/images/jouni.jpg";
 import ukkokoli from "@/public/images/ukko-koli.jpg";
 import i_ja_r from "@/public/images/i-ja-r.jpeg";
+import soittaja from "@/public/images/soittaja.jpg";
+import waugh from "@/public/images/waugh-meri.jpg";
 
 const artwork: Artwork[] = [
   {
@@ -48,6 +49,11 @@ const artwork: Artwork[] = [
   {
     id: "jouni",
     img: jouni,
+    category: "painting",
+  },
+  {
+    id: "soittaja",
+    img: soittaja,
     category: "painting",
   },
   {
@@ -96,11 +102,6 @@ const artwork: Artwork[] = [
     category: "painting",
   },
   {
-    id: "olia",
-    img: olia,
-    category: "painting",
-  },
-  {
     id: "female_1",
     img: female_1,
     category: "painting",
@@ -123,6 +124,11 @@ const artwork: Artwork[] = [
   {
     id: "snowscape",
     img: snowscape,
+    category: "painting",
+  },
+  {
+    id: "waugh",
+    img: waugh,
     category: "painting",
   },
   {

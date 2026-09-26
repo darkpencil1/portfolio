@@ -20,6 +20,10 @@ const artwork: CypressArtwork[] = [
     category: "painting",
   },
   {
+    id: "soittaja",
+    category: "painting",
+  },
+  {
     id: "partanaama",
     category: "painting",
   },
@@ -56,10 +60,6 @@ const artwork: CypressArtwork[] = [
     category: "painting",
   },
   {
-    id: "olia",
-    category: "painting",
-  },
-  {
     id: "female_1",
     category: "painting",
   },
@@ -77,6 +77,10 @@ const artwork: CypressArtwork[] = [
   },
   {
     id: "snowscape",
+    category: "painting",
+  },
+  {
+    id: "waugh",
     category: "painting",
   },
   {
