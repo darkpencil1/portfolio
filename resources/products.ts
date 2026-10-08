@@ -97,7 +97,7 @@ const products: IProduct[] = [
     imageUrl: ukkokoli,
     preview: ukkokoli,
     images: [ukkokoli, ukkokoli_hanged, ukko_koli_side],
-    price: [{ price: 300 }],
+    price: [{ price: 500 }],
     size: {
       en: "40x50 cm",
       fi: "40x50 cm",
